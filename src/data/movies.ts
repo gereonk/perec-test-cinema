@@ -66,6 +66,30 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/cleo-from-5-to-7"
       },
       {
+        id: "persona",
+        title: "Persona",
+        year: 1966,
+        runtime: "83 min",
+        rating: 8.1,
+        poster: `${TMDB_IMG}/w500/oFEexiDVN9bKfvrcYJQD7kf2dsn.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/oFEexiDVN9bKfvrcYJQD7kf2dsn.jpg`,
+        description: "A nurse is put in charge of a mute actress and finds that their personae are melding together in Ingmar Bergman's psychological masterpiece.",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/persona"
+      },
+      {
+        id: "summer-1993",
+        title: "Summer 1993",
+        year: 2017,
+        runtime: "96 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/5NwMq13f1tiOWj8ONWCUu7gu9sP.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/5NwMq13f1tiOWj8ONWCUu7gu9sP.jpg`,
+        description: "After her mother's death, six-year-old Frida is sent to live with her aunt and uncle in the Catalan countryside. A tender portrait of childhood grief and adaptation.",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/summer-1993"
+      },
+      {
         id: "atertraffen",
         title: "Återträffen",
         year: 2013,
@@ -177,6 +201,18 @@ export const categories: Category[] = [
         description: "A collection of eleven films from Jim Jarmusch, each featuring coffee and cigarettes as recurring motifs in conversations between strangers and friends.",
         service: "MUBI",
         link: "https://mubi.com/sv/films/coffee-and-cigarettes"
+      },
+      {
+        id: "moonrise-kingdom",
+        title: "Moonrise Kingdom",
+        year: 2012,
+        runtime: "94 min",
+        rating: 7.8,
+        poster: `${TMDB_IMG}/w500/xKtbPflGVrBlyXuUI8W5ROmXYRb.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/xKtbPflGVrBlyXuUI8W5ROmXYRb.jpg`,
+        description: "A pair of young lovers flee their New England town, which causes a local search party to fan out to find them. Wes Anderson's whimsical coming-of-age tale.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/70242565"
       }
     ]
   },
@@ -240,6 +276,31 @@ export const categories: Category[] = [
         description: "Five high school students meet in Saturday detention and discover how they have a lot more in common than they thought.",
         service: "Netflix",
         link: "https://www.netflix.com/se/title/60029171"
+      },
+      {
+        id: "fantastic-mr-fox",
+        title: "Fantastic Mr. Fox",
+        year: 2009,
+        runtime: "87 min",
+        rating: 7.9,
+        poster: `${TMDB_IMG}/w500/xve4cgfYItnOhtzLYoTwTVy5FGr.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/xve4cgfYItnOhtzLYoTwTVy5FGr.jpg`,
+        description: "An urbane fox cannot resist returning to his farm raiding ways and must help his community survive the farmers' retaliation. Wes Anderson's stop-motion adaptation of Roald Dahl.",
+        service: "Disney+",
+        link: "https://www.disneyplus.com/sv-se/movies/fantastic-mr-fox/4cna09XI2gqn"
+      },
+      {
+        id: "grand-budapest-hotel",
+        title: "The Grand Budapest Hotel",
+        year: 2014,
+        runtime: "99 min",
+        rating: 8.1,
+        poster: `${TMDB_IMG}/w500/nX5XotM9yprCKarRH4fzOq1VM1J.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/nX5XotM9yprCKarRH4fzOq1VM1J.jpg`,
+        description: "The adventures of Gustave H, a legendary concierge at a famous European hotel, and Zero Moustafa, the lobby boy who becomes his most trusted friend.",
+        service: "Disney+",
+        link: "https://www.disneyplus.com/sv-se/movies/the-grand-budapest-hotel/1RW10E8yCYDB",
+        featured: true
       }
     ]
   },
