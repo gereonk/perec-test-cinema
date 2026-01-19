@@ -1,0 +1,64 @@
+name: Nightly Update
+
+on:
+  schedule:
+    # Run at 3:00 AM UTC every day
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    # Allow manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install tsx for running TypeScript
+        run: npm install -g tsx
+
+      - name: Run nightly update
+        run: tsx scripts/nightly-update.ts
+        env:
+          NODE_ENV: production
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet src/data/movies.ts; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/data/movies.ts
+          git commit -m "chore: nightly update - validate links and re-cluster content
+
+          - Removed broken streaming links
+          - Re-clustered movies with fresh category names
+          - Automated update via GitHub Actions"
+          git push
+
+      - name: Trigger Vercel deployment
+        if: steps.changes.outputs.has_changes == 'true'
+        run: |
+          echo "Changes pushed to main branch - Vercel will automatically deploy"
