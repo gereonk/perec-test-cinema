@@ -25,22 +25,151 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Intimate Portraits",
+    name: "Inner Worlds",
     icon: "🎨",
     movies: [
       {
-        id: "aftersun",
-        title: "Aftersun",
-        year: 2022,
-        runtime: "101 min",
-        rating: 7.7,
-        poster: `${TMDB_IMG}/w500/evKz85EKouVbIr51zy5fOtpNRPg.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/evKz85EKouVbIr51zy5fOtpNRPg.jpg`,
-        description: "Sophie reflects on the shared joy and private melancholy of a holiday she took with her father twenty years earlier. Memories real and imagined fill the gaps between as she tries to reconcile the father she knew with the man she didn't.",
+        id: "summer-1993",
+        title: "Summer 1993",
+        year: 2017,
+        runtime: "96 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/krdSl7IpDb9c31CXrzA5yfP1oYM.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/krdSl7IpDb9c31CXrzA5yfP1oYM.jpg`,
+        description: "After her mother",
         service: "MUBI",
-        link: "https://mubi.com/sv/films/aftersun",
+        link: "https://mubi.com/sv/films/summer-1993"
+      },
+      {
+        id: "petite-maman",
+        title: "Petite Maman",
+        year: 2021,
+        runtime: "72 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/fxl2ARZO2vRfUGDfqSz2bostauE.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/fxl2ARZO2vRfUGDfqSz2bostauE.jpg`,
+        description: "Eight-year-old Nelly has just lost her grandmother and meets a mysterious girl her own age in the woods. Céline Sciamma",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/petite-maman"
+      },
+      {
+        id: "shiva-baby",
+        title: "Shiva Baby",
+        year: 2020,
+        runtime: "77 min",
+        rating: 7.1,
+        poster: `${TMDB_IMG}/w500/4sdqVsT6SHqtbCYZS7bhVoEftlL.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/4sdqVsT6SHqtbCYZS7bhVoEftlL.jpg`,
+        description: "A college student",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/shiva-baby"
+      },
+      {
+        id: "gravity",
+        title: "Gravity",
+        year: 2013,
+        runtime: "91 min",
+        rating: 7.7,
+        poster: `${TMDB_IMG}/w500/kZ2nZw8D681aphje8NJi8EfbL1U.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/kZ2nZw8D681aphje8NJi8EfbL1U.jpg`,
+        description: "A medical engineer and an astronaut work together to survive after an accident leaves them adrift in space. Alfonso Cuarón",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/Gravity/0MW3B1AN9EBQN5F5825WH831MA"
+      },
+      {
+        id: "in-the-mood-for-love",
+        title: "In the Mood for Love",
+        year: 2000,
+        runtime: "98 min",
+        rating: 8.1,
+        poster: `${TMDB_IMG}/w500/m8jNwTP13ubYZyh5siVuyT9pZDp.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/m8jNwTP13ubYZyh5siVuyT9pZDp.jpg`,
+        description: "Two neighbors form a strong bond after both suspect extramarital activities of their spouses. However, they agree to keep their bond platonic so as not to commit the same sins.",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/in-the-mood-for-love",
         featured: true
       },
+      {
+        id: "coffee-and-cigarettes",
+        title: "Coffee and Cigarettes",
+        year: 2003,
+        runtime: "95 min",
+        rating: 7,
+        poster: `${TMDB_IMG}/w500/pfG02QCsutx3PIxFS8UY4iM9AsS.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/pfG02QCsutx3PIxFS8UY4iM9AsS.jpg`,
+        description: "A collection of eleven films from Jim Jarmusch, each featuring coffee and cigarettes as recurring motifs in conversations between strangers and friends.",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/coffee-and-cigarettes"
+      },
+      {
+        id: "weekend",
+        title: "Weekend",
+        year: 2011,
+        runtime: "97 min",
+        rating: 7.6,
+        poster: `${TMDB_IMG}/w500/ksg3QX2iMLzEkvS6AwIGh5A9CXT.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/ksg3QX2iMLzEkvS6AwIGh5A9CXT.jpg`,
+        description: "After a drunken house party, Russell heads out to a gay club and picks up Glen. The next morning, Glen starts recording his one-night stands on tape.",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/weekend"
+      },
+      {
+        id: "fallen-leaves",
+        title: "Fallen Leaves",
+        year: 2023,
+        runtime: "82 min",
+        rating: 7.3,
+        poster: `${TMDB_IMG}/w500/9ayYOpeqHhxfHHUoyt3kXzznECO.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/9ayYOpeqHhxfHHUoyt3kXzznECO.jpg`,
+        description: "Two lonely souls find each other in Helsinki",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/fallen-leaves-2023",
+        featured: true
+      },
+      {
+        id: "passages",
+        title: "Passages",
+        year: 2023,
+        runtime: "91 min",
+        rating: 6.6,
+        poster: `${TMDB_IMG}/w500/8GR7s4YiyFswOmTibfKCYAPxT9k.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/8GR7s4YiyFswOmTibfKCYAPxT9k.jpg`,
+        description: "A gay filmmaker",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/passages-2022"
+      },
+      {
+        id: "fantastic-mr-fox",
+        title: "Fantastic Mr. Fox",
+        year: 2009,
+        runtime: "87 min",
+        rating: 7.9,
+        poster: `${TMDB_IMG}/w500/euZyZb6iGreujYKrGyZHRddhUYh.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/euZyZb6iGreujYKrGyZHRddhUYh.jpg`,
+        description: "An urbane fox cannot resist returning to his farm raiding ways and must help his community survive the farmers",
+        service: "Disney+",
+        link: "https://www.disneyplus.com/sv-se/movies/fantastic-mr-fox/4cna09XI2gqn"
+      },
+      {
+        id: "grand-budapest-hotel",
+        title: "The Grand Budapest Hotel",
+        year: 2014,
+        runtime: "99 min",
+        rating: 8.1,
+        poster: `${TMDB_IMG}/w500/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg`,
+        description: "The adventures of Gustave H, a legendary concierge at a famous European hotel, and Zero Moustafa, the lobby boy who becomes his most trusted friend.",
+        service: "Disney+",
+        link: "https://www.disneyplus.com/sv-se/movies/the-grand-budapest-hotel/1RW10E8yCYDB",
+        featured: true
+      }
+    ]
+  },
+  {
+    id: "coming-of-age",
+    name: "Coming of Age, Contained",
+    icon: "🌱",
+    movies: [
       {
         id: "columbus",
         title: "Columbus",
@@ -53,6 +182,98 @@ export const categories: Category[] = [
         service: "MUBI",
         link: "https://mubi.com/sv/films/columbus"
       },
+      {
+        id: "the-witch",
+        title: "The Witch",
+        year: 2015,
+        runtime: "92 min",
+        rating: 6.9,
+        poster: `${TMDB_IMG}/w500/zap5hpFCWSvdWSuPGAQyjUv2wAC.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/zap5hpFCWSvdWSuPGAQyjUv2wAC.jpg`,
+        description: "A family in 1630s New England is torn apart by the forces of witchcraft, black magic, and possession.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/80037280",
+        featured: true
+      },
+      {
+        id: "moonrise-kingdom",
+        title: "Moonrise Kingdom",
+        year: 2012,
+        runtime: "94 min",
+        rating: 7.8,
+        poster: `${TMDB_IMG}/w500/y4SXcbNl6CEF2t36icuzuBioj7K.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/y4SXcbNl6CEF2t36icuzuBioj7K.jpg`,
+        description: "A pair of young lovers flee their New England town, which causes a local search party to fan out to find them. Wes Anderson",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/70242565"
+      },
+      {
+        id: "lost-in-translation",
+        title: "Lost in Translation",
+        year: 2003,
+        runtime: "102 min",
+        rating: 7.7,
+        poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
+        description: "A fading movie star and a neglected young woman form an unlikely bond in Tokyo. Sofia Coppola",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/Lost-in-Translation/0KABCI41NIHS9E0M0B1AGLZ99M"
+      },
+      {
+        id: "all-of-us-strangers",
+        title: "All of Us Strangers",
+        year: 2023,
+        runtime: "105 min",
+        rating: 7.6,
+        poster: `${TMDB_IMG}/w500/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg`,
+        description: "A screenwriter revisits his childhood home and finds his long-dead parents waiting. Andrew Haigh",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/strangers-2022-andrew-haigh"
+      },
+      {
+        id: "the-breakfast-club",
+        title: "The Breakfast Club",
+        year: 1985,
+        runtime: "97 min",
+        rating: 7.8,
+        poster: `${TMDB_IMG}/w500/wM9ErA8UVdcce5P4oefQinN8VVV.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/wM9ErA8UVdcce5P4oefQinN8VVV.jpg`,
+        description: "Five high school students meet in Saturday detention and discover how they have a lot more in common than they thought.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/60029171"
+      },
+      {
+        id: "frances-ha",
+        title: "Frances Ha",
+        year: 2012,
+        runtime: "86 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/jrq1NoKvsxWCcffVOjegiYwloFN.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/jrq1NoKvsxWCcffVOjegiYwloFN.jpg`,
+        description: "A young dancer navigates friendship, ambition, and the gap between who she is and who she wants to be in New York. Noah Baumbach and Greta Gerwig",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/frances-ha"
+      },
+      {
+        id: "close",
+        title: "Close",
+        year: 2022,
+        runtime: "104 min",
+        rating: 7.8,
+        poster: `${TMDB_IMG}/w500/dlMNnWs7Mz8Nk5AC447Ew1tD5pn.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/dlMNnWs7Mz8Nk5AC447Ew1tD5pn.jpg`,
+        description: "Two 13-year-old boys share an intense friendship until their classmates",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/close-2022"
+      }
+    ]
+  },
+  {
+    id: "classics",
+    name: "Timeless Classics",
+    icon: "🎬",
+    movies: [
       {
         id: "cleo-from-5-to-7",
         title: "Cléo from 5 to 7",
@@ -73,40 +294,139 @@ export const categories: Category[] = [
         rating: 8.1,
         poster: `${TMDB_IMG}/w500/v2KsLNChpT6vLf0YFhkJmAtGkNq.jpg`,
         backdrop: `${TMDB_IMG}/w1280/v2KsLNChpT6vLf0YFhkJmAtGkNq.jpg`,
-        description: "A nurse is put in charge of a mute actress and finds that their personae are melding together in Ingmar Bergman's psychological masterpiece.",
+        description: "A nurse is put in charge of a mute actress and finds that their personae are melding together in Ingmar Bergman",
         service: "MUBI",
         link: "https://mubi.com/sv/films/persona"
       },
       {
-        id: "summer-1993",
-        title: "Summer 1993",
-        year: 2017,
-        runtime: "96 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/krdSl7IpDb9c31CXrzA5yfP1oYM.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/krdSl7IpDb9c31CXrzA5yfP1oYM.jpg`,
-        description: "After her mother's death, six-year-old Frida is sent to live with her aunt and uncle in the Catalan countryside. A tender portrait of childhood grief and adaptation.",
+        id: "beau-travail",
+        title: "Beau Travail",
+        year: 1999,
+        runtime: "92 min",
+        rating: 7.3,
+        poster: `${TMDB_IMG}/w500/5ySa1aQaT7kMcAbKwlS1HXxp2hM.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/5ySa1aQaT7kMcAbKwlS1HXxp2hM.jpg`,
+        description: "In the barren desert of Djibouti, a French Foreign Legion sergeant",
         service: "MUBI",
-        link: "https://mubi.com/sv/films/summer-1993"
+        link: "https://mubi.com/sv/films/beau-travail"
       },
       {
-        id: "petite-maman",
-        title: "Petite Maman",
-        year: 2021,
-        runtime: "72 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/fxl2ARZO2vRfUGDfqSz2bostauE.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/fxl2ARZO2vRfUGDfqSz2bostauE.jpg`,
-        description: "Eight-year-old Nelly has just lost her grandmother and meets a mysterious girl her own age in the woods. Céline Sciamma's spellbinding meditation on grief, memory, and the bond between mothers and daughters.",
+        id: "run-lola-run",
+        title: "Run Lola Run",
+        year: 1998,
+        runtime: "81 min",
+        rating: 7.6,
+        poster: `${TMDB_IMG}/w500/v0giIi4bTILVhNhJajet3WWY3FA.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/v0giIi4bTILVhNhJajet3WWY3FA.jpg`,
+        description: "Lola has 20 minutes to find 100,000 Deutschmarks to save her boyfriend",
         service: "MUBI",
-        link: "https://mubi.com/sv/films/petite-maman"
+        link: "https://mubi.com/sv/films/run-lola-run"
       },
+      {
+        id: "the-truman-show",
+        title: "The Truman Show",
+        year: 1998,
+        runtime: "103 min",
+        rating: 8.2,
+        poster: `${TMDB_IMG}/w500/vuza0WqY239yBXOadKlGwJsZJFE.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/vuza0WqY239yBXOadKlGwJsZJFE.jpg`,
+        description: "An insurance salesman discovers his entire life is actually a reality TV show. Peter Weir",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/The-Truman-Show/0M6IL8RQZA8OP3943NE5061HOD"
+      },
+      {
+        id: "my-neighbor-totoro",
+        title: "My Neighbor Totoro",
+        year: 1988,
+        runtime: "86 min",
+        rating: 8.1,
+        poster: `${TMDB_IMG}/w500/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg`,
+        description: "When two girls move to the country to be near their ailing mother, they have adventures with the wondrous forest spirits who live nearby.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/60032294",
+        featured: true
+      }
+    ]
+  },
+  {
+    id: "love",
+    name: "Hearts Entwined",
+    icon: "💕",
+    movies: [
+      {
+        id: "cold-war",
+        title: "Cold War",
+        year: 2018,
+        runtime: "89 min",
+        rating: 7.5,
+        poster: `${TMDB_IMG}/w500/6rbS8oPIgUMhQgIX8oGVTtlNgLR.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/6rbS8oPIgUMhQgIX8oGVTtlNgLR.jpg`,
+        description: "A passionate love story between two people of different backgrounds and temperaments, who are fatefully mismatched and yet condemned to each other. Set against the backdrop of the Cold War in 1950s Poland, Berlin, Yugoslavia and Paris.",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/zimna-wojna"
+      },
+      {
+        id: "tangerine",
+        title: "Tangerine",
+        year: 2015,
+        runtime: "88 min",
+        rating: 7.1,
+        poster: `${TMDB_IMG}/w500/EKLR5c61XQzBTeMokFrmS3kdt8.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/EKLR5c61XQzBTeMokFrmS3kdt8.jpg`,
+        description: "A transgender sex worker tears through Los Angeles on Christmas Eve searching for the pimp who broke her heart. Sean Baker",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/tangerine-2015"
+      },
+      {
+        id: "chungking-express",
+        title: "Chungking Express",
+        year: 1994,
+        runtime: "102 min",
+        rating: 8,
+        poster: `${TMDB_IMG}/w500/43I9DcNoCzpyzK8JCkJYpHqHqGG.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/43I9DcNoCzpyzK8JCkJYpHqHqGG.jpg`,
+        description: "Two lovelorn Hong Kong cops fall for two very different women in this romantic comedy drama.",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/chungking-express"
+      },
+      {
+        id: "happy-together",
+        title: "Happy Together",
+        year: 1997,
+        runtime: "96 min",
+        rating: 7.7,
+        poster: `${TMDB_IMG}/w500/kO4KjUkQOfWSBw06Bdl7m6AlEP7.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/kO4KjUkQOfWSBw06Bdl7m6AlEP7.jpg`,
+        description: "A couple from Hong Kong takes a trip to Argentina but breaks up on their journey. On the way to the Iguazu Falls, they try to deal with their confusing relationship.",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/happy-together"
+      },
+      {
+        id: "beasts-of-the-southern-wild",
+        title: "Beasts of the Southern Wild",
+        year: 2012,
+        runtime: "93 min",
+        rating: 6.8,
+        poster: `${TMDB_IMG}/w500/nQJmWekGYlXhezGUb21xFfEfwhH.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/7LWLPvyfLSb2oOlgWwAwUqA8uKo.jpg`,
+        description: "Hushpuppy, an intrepid six-year-old girl, lives with her father, Wink, in 'the Bathtub', a southern Delta community at the edge of the world. Wink’s tough love prepares her for the unraveling of the u...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/beasts-of-the-southern-wild"
+      }
+    ]
+  },
+  {
+    id: "nordic",
+    name: "Scandinavian Visions",
+    icon: "❄️",
+    movies: [
       {
         id: "atertraffen",
         title: "Återträffen",
         year: 2013,
         runtime: "88 min",
-        rating: 7.0,
+        rating: 7,
         poster: `${TMDB_IMG}/w500/2m4ncyUtpBQbYZoSxwrR80Nkq6H.jpg`,
         backdrop: `${TMDB_IMG}/w1280/2m4ncyUtpBQbYZoSxwrR80Nkq6H.jpg`,
         description: "Artist Anna Odell recreates her high school reunion to confront the classmates who bullied her, blurring the lines between documentary and fiction in this Guldbagge-winning Swedish drama.",
@@ -129,249 +449,9 @@ export const categories: Category[] = [
     ]
   },
   {
-    id: "tension",
-    name: "Tension in Tight Spaces",
-    icon: "💥",
-    movies: [
-      {
-        id: "the-witch",
-        title: "The Witch",
-        year: 2015,
-        runtime: "92 min",
-        rating: 6.9,
-        poster: `${TMDB_IMG}/w500/zap5hpFCWSvdWSuPGAQyjUv2wAC.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/zap5hpFCWSvdWSuPGAQyjUv2wAC.jpg`,
-        description: "A family in 1630s New England is torn apart by the forces of witchcraft, black magic, and possession.",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/80037280",
-        featured: true
-      },
-      {
-        id: "cold-war",
-        title: "Cold War",
-        year: 2018,
-        runtime: "89 min",
-        rating: 7.5,
-        poster: `${TMDB_IMG}/w500/6rbS8oPIgUMhQgIX8oGVTtlNgLR.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/6rbS8oPIgUMhQgIX8oGVTtlNgLR.jpg`,
-        description: "A passionate love story between two people of different backgrounds and temperaments, who are fatefully mismatched and yet condemned to each other. Set against the backdrop of the Cold War in 1950s Poland, Berlin, Yugoslavia and Paris.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/zimna-wojna"
-      },
-      {
-        id: "beau-travail",
-        title: "Beau Travail",
-        year: 1999,
-        runtime: "92 min",
-        rating: 7.3,
-        poster: `${TMDB_IMG}/w500/5ySa1aQaT7kMcAbKwlS1HXxp2hM.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/5ySa1aQaT7kMcAbKwlS1HXxp2hM.jpg`,
-        description: "In the barren desert of Djibouti, a French Foreign Legion sergeant's obsession with a striking young recruit drives him toward self-destruction. Claire Denis's hypnotic masterpiece.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/beau-travail"
-      },
-      {
-        id: "run-lola-run",
-        title: "Run Lola Run",
-        year: 1998,
-        runtime: "81 min",
-        rating: 7.6,
-        poster: `${TMDB_IMG}/w500/v0giIi4bTILVhNhJajet3WWY3FA.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/v0giIi4bTILVhNhJajet3WWY3FA.jpg`,
-        description: "Lola has 20 minutes to find 100,000 Deutschmarks to save her boyfriend's life. Tom Tykwer's kinetic, time-bending thriller plays out three different scenarios in a breathless race against the clock.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/run-lola-run"
-      },
-      {
-        id: "shiva-baby",
-        title: "Shiva Baby",
-        year: 2020,
-        runtime: "77 min",
-        rating: 7.1,
-        poster: `${TMDB_IMG}/w500/4sdqVsT6SHqtbCYZS7bhVoEftlL.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/4sdqVsT6SHqtbCYZS7bhVoEftlL.jpg`,
-        description: "A college student's day takes an uncomfortable turn when she runs into her sugar daddy and ex-girlfriend at a shiva. Emma Seligman's claustrophobic comedy of anxiety.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/shiva-baby"
-      },
-      {
-        id: "tangerine",
-        title: "Tangerine",
-        year: 2015,
-        runtime: "88 min",
-        rating: 7.1,
-        poster: `${TMDB_IMG}/w500/EKLR5c61XQzBTeMokFrmS3kdt8.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/EKLR5c61XQzBTeMokFrmS3kdt8.jpg`,
-        description: "A transgender sex worker tears through Los Angeles on Christmas Eve searching for the pimp who broke her heart. Sean Baker's vibrant, iPhone-shot debut is a kinetic portrait of friendship and survival.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/tangerine-2015"
-      },
-      {
-        id: "gravity",
-        title: "Gravity",
-        year: 2013,
-        runtime: "91 min",
-        rating: 7.7,
-        poster: `${TMDB_IMG}/w500/kZ2nZw8D681aphje8NJi8EfbL1U.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/kZ2nZw8D681aphje8NJi8EfbL1U.jpg`,
-        description: "A medical engineer and an astronaut work together to survive after an accident leaves them adrift in space. Alfonso Cuarón's visceral masterpiece about survival and letting go.",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/Gravity/0MW3B1AN9EBQN5F5825WH831MA"
-      },
-      {
-        id: "the-truman-show",
-        title: "The Truman Show",
-        year: 1998,
-        runtime: "103 min",
-        rating: 8.2,
-        poster: `${TMDB_IMG}/w500/vuza0WqY239yBXOadKlGwJsZJFE.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/vuza0WqY239yBXOadKlGwJsZJFE.jpg`,
-        description: "An insurance salesman discovers his entire life is actually a reality TV show. Peter Weir's prescient satire about media, authenticity, and the courage to face the unknown.",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/The-Truman-Show/0M6IL8RQZA8OP3943NE5061HOD"
-      }
-    ]
-  },
-  {
     id: "poetry",
-    name: "The Poetry of Brevity",
+    name: "Fleeting Beauty",
     icon: "✨",
-    movies: [
-      {
-        id: "in-the-mood-for-love",
-        title: "In the Mood for Love",
-        year: 2000,
-        runtime: "98 min",
-        rating: 8.1,
-        poster: `${TMDB_IMG}/w500/m8jNwTP13ubYZyh5siVuyT9pZDp.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/m8jNwTP13ubYZyh5siVuyT9pZDp.jpg`,
-        description: "Two neighbors form a strong bond after both suspect extramarital activities of their spouses. However, they agree to keep their bond platonic so as not to commit the same sins.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/in-the-mood-for-love",
-        featured: true
-      },
-      {
-        id: "chungking-express",
-        title: "Chungking Express",
-        year: 1994,
-        runtime: "102 min",
-        rating: 8.0,
-        poster: `${TMDB_IMG}/w500/43I9DcNoCzpyzK8JCkJYpHqHqGG.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/43I9DcNoCzpyzK8JCkJYpHqHqGG.jpg`,
-        description: "Two lovelorn Hong Kong cops fall for two very different women in this romantic comedy drama.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/chungking-express"
-      },
-      {
-        id: "coffee-and-cigarettes",
-        title: "Coffee and Cigarettes",
-        year: 2003,
-        runtime: "95 min",
-        rating: 7.0,
-        poster: `${TMDB_IMG}/w500/pfG02QCsutx3PIxFS8UY4iM9AsS.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/pfG02QCsutx3PIxFS8UY4iM9AsS.jpg`,
-        description: "A collection of eleven films from Jim Jarmusch, each featuring coffee and cigarettes as recurring motifs in conversations between strangers and friends.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/coffee-and-cigarettes"
-      },
-      {
-        id: "moonrise-kingdom",
-        title: "Moonrise Kingdom",
-        year: 2012,
-        runtime: "94 min",
-        rating: 7.8,
-        poster: `${TMDB_IMG}/w500/y4SXcbNl6CEF2t36icuzuBioj7K.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/y4SXcbNl6CEF2t36icuzuBioj7K.jpg`,
-        description: "A pair of young lovers flee their New England town, which causes a local search party to fan out to find them. Wes Anderson's whimsical coming-of-age tale.",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/70242565"
-      }
-    ]
-  },
-  {
-    id: "quiet",
-    name: "Quiet Revelations",
-    icon: "🌙",
-    movies: [
-      {
-        id: "weekend",
-        title: "Weekend",
-        year: 2011,
-        runtime: "97 min",
-        rating: 7.6,
-        poster: `${TMDB_IMG}/w500/ksg3QX2iMLzEkvS6AwIGh5A9CXT.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/ksg3QX2iMLzEkvS6AwIGh5A9CXT.jpg`,
-        description: "After a drunken house party, Russell heads out to a gay club and picks up Glen. The next morning, Glen starts recording his one-night stands on tape.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/weekend"
-      },
-      {
-        id: "happy-together",
-        title: "Happy Together",
-        year: 1997,
-        runtime: "96 min",
-        rating: 7.7,
-        poster: `${TMDB_IMG}/w500/kO4KjUkQOfWSBw06Bdl7m6AlEP7.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/kO4KjUkQOfWSBw06Bdl7m6AlEP7.jpg`,
-        description: "A couple from Hong Kong takes a trip to Argentina but breaks up on their journey. On the way to the Iguazu Falls, they try to deal with their confusing relationship.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/happy-together"
-      },
-      {
-        id: "lost-in-translation",
-        title: "Lost in Translation",
-        year: 2003,
-        runtime: "102 min",
-        rating: 7.7,
-        poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
-        description: "A fading movie star and a neglected young woman form an unlikely bond in Tokyo. Sofia Coppola's wistful meditation on loneliness, connection, and the spaces between words.",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/Lost-in-Translation/0KABCI41NIHS9E0M0B1AGLZ99M"
-      },
-      {
-        id: "fallen-leaves",
-        title: "Fallen Leaves",
-        year: 2023,
-        runtime: "82 min",
-        rating: 7.3,
-        poster: `${TMDB_IMG}/w500/9ayYOpeqHhxfHHUoyt3kXzznECO.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/9ayYOpeqHhxfHHUoyt3kXzznECO.jpg`,
-        description: "Two lonely souls find each other in Helsinki's bleakest corners. Aki Kaurismäki's deadpan romantic comedy won the Jury Prize at Cannes—a tender ode to love persisting against all odds.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/fallen-leaves-2023",
-        featured: true
-      },
-      {
-        id: "passages",
-        title: "Passages",
-        year: 2023,
-        runtime: "91 min",
-        rating: 6.6,
-        poster: `${TMDB_IMG}/w500/8GR7s4YiyFswOmTibfKCYAPxT9k.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/8GR7s4YiyFswOmTibfKCYAPxT9k.jpg`,
-        description: "A gay filmmaker's impulsive affair with a young woman throws his marriage into chaos. Ira Sachs's frank, sensual exploration of desire and the damage we inflict on those we love.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/passages-2022"
-      },
-      {
-        id: "all-of-us-strangers",
-        title: "All of Us Strangers",
-        year: 2023,
-        runtime: "105 min",
-        rating: 7.6,
-        poster: `${TMDB_IMG}/w500/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg`,
-        description: "A screenwriter revisits his childhood home and finds his long-dead parents waiting. Andrew Haigh's devastating ghost story about grief, memory, and the love that haunts us.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/strangers-2022-andrew-haigh"
-      }
-    ]
-  },
-  {
-    id: "coming-of-age",
-    name: "Coming of Age, Contained",
-    icon: "🌱",
     movies: [
       {
         id: "lady-bird",
@@ -385,86 +465,25 @@ export const categories: Category[] = [
         service: "Netflix",
         link: "https://www.netflix.com/se/title/80205227",
         featured: true
-      },
-      {
-        id: "the-breakfast-club",
-        title: "The Breakfast Club",
-        year: 1985,
-        runtime: "97 min",
-        rating: 7.8,
-        poster: `${TMDB_IMG}/w500/wM9ErA8UVdcce5P4oefQinN8VVV.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/wM9ErA8UVdcce5P4oefQinN8VVV.jpg`,
-        description: "Five high school students meet in Saturday detention and discover how they have a lot more in common than they thought.",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/60029171"
-      },
-      {
-        id: "fantastic-mr-fox",
-        title: "Fantastic Mr. Fox",
-        year: 2009,
-        runtime: "87 min",
-        rating: 7.9,
-        poster: `${TMDB_IMG}/w500/euZyZb6iGreujYKrGyZHRddhUYh.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/euZyZb6iGreujYKrGyZHRddhUYh.jpg`,
-        description: "An urbane fox cannot resist returning to his farm raiding ways and must help his community survive the farmers' retaliation. Wes Anderson's stop-motion adaptation of Roald Dahl.",
-        service: "Disney+",
-        link: "https://www.disneyplus.com/sv-se/movies/fantastic-mr-fox/4cna09XI2gqn"
-      },
-      {
-        id: "grand-budapest-hotel",
-        title: "The Grand Budapest Hotel",
-        year: 2014,
-        runtime: "99 min",
-        rating: 8.1,
-        poster: `${TMDB_IMG}/w500/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg`,
-        description: "The adventures of Gustave H, a legendary concierge at a famous European hotel, and Zero Moustafa, the lobby boy who becomes his most trusted friend.",
-        service: "Disney+",
-        link: "https://www.disneyplus.com/sv-se/movies/the-grand-budapest-hotel/1RW10E8yCYDB",
-        featured: true
-      },
-      {
-        id: "frances-ha",
-        title: "Frances Ha",
-        year: 2012,
-        runtime: "86 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/jrq1NoKvsxWCcffVOjegiYwloFN.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/jrq1NoKvsxWCcffVOjegiYwloFN.jpg`,
-        description: "A young dancer navigates friendship, ambition, and the gap between who she is and who she wants to be in New York. Noah Baumbach and Greta Gerwig's buoyant black-and-white love letter to twentysomething aimlessness.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/frances-ha"
-      },
-      {
-        id: "close",
-        title: "Close",
-        year: 2022,
-        runtime: "104 min",
-        rating: 7.8,
-        poster: `${TMDB_IMG}/w500/dlMNnWs7Mz8Nk5AC447Ew1tD5pn.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/dlMNnWs7Mz8Nk5AC447Ew1tD5pn.jpg`,
-        description: "Two 13-year-old boys share an intense friendship until their classmates' scrutiny pulls them apart. Lukas Dhont's Grand Prix winner at Cannes is a quietly devastating portrait of adolescent intimacy.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/close-2022"
       }
     ]
   },
   {
-    id: "classics",
-    name: "Timeless Classics",
-    icon: "🎬",
+    id: "quiet",
+    name: "Quiet Revelations",
+    icon: "🌙",
     movies: [
       {
-        id: "my-neighbor-totoro",
-        title: "My Neighbor Totoro",
-        year: 1988,
-        runtime: "86 min",
-        rating: 8.1,
-        poster: `${TMDB_IMG}/w500/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg`,
-        description: "When two girls move to the country to be near their ailing mother, they have adventures with the wondrous forest spirits who live nearby.",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/60032294",
+        id: "aftersun",
+        title: "Aftersun",
+        year: 2022,
+        runtime: "101 min",
+        rating: 7.7,
+        poster: `${TMDB_IMG}/w500/evKz85EKouVbIr51zy5fOtpNRPg.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/evKz85EKouVbIr51zy5fOtpNRPg.jpg`,
+        description: "Sophie reflects on the shared joy and private melancholy of a holiday she took with her father twenty years earlier. Memories real and imagined fill the gaps between as she tries to reconcile the father she knew with the man she didn",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/aftersun",
         featured: true
       }
     ]
