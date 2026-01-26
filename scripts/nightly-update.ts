@@ -3,6 +3,25 @@ import * as path from 'path';
 
 const MOVIES_FILE = path.join(__dirname, '../src/data/movies.ts');
 const MAX_RUNTIME_MINUTES = 105;
+const TMDB_API_KEY = process.env.TMDB_API_KEY || '';
+const TMDB_BASE = 'https://api.themoviedb.org/3';
+const TMDB_IMG_BASE = 'https://image.tmdb.org/t/p';
+
+// Swedish streaming service URL patterns for verification
+const STREAMING_SERVICES = {
+  MUBI: {
+    searchUrl: (title: string) => `https://mubi.com/sv/films/${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+    verifyUrl: (url: string) => url.includes('mubi.com'),
+  },
+  Netflix: {
+    searchUrl: (title: string) => `https://www.netflix.com/se/title/`,
+    verifyUrl: (url: string) => url.includes('netflix.com'),
+  },
+  'Prime Video': {
+    searchUrl: (title: string) => `https://www.primevideo.com/-/sv/detail/`,
+    verifyUrl: (url: string) => url.includes('primevideo.com'),
+  },
+};
 
 interface Movie {
   id: string;
@@ -31,6 +50,66 @@ interface LinkCheckResult {
   statusCode?: number;
 }
 
+interface TMDBMovie {
+  id: number;
+  title: string;
+  original_title: string;
+  release_date: string;
+  runtime: number;
+  vote_average: number;
+  overview: string;
+  poster_path: string | null;
+  backdrop_path: string | null;
+  genre_ids?: number[];
+}
+
+interface TMDBSearchResult {
+  results: TMDBMovie[];
+  total_results: number;
+}
+
+interface TMDBWatchProviders {
+  results?: {
+    SE?: {
+      flatrate?: Array<{ provider_name: string; provider_id: number }>;
+    };
+  };
+}
+
+// Curated list of critically acclaimed short films to check for availability
+const FILMS_TO_CHECK = [
+  { title: 'Stranger by the Lake', year: 2013 },
+  { title: 'Victoria', year: 2015 },
+  { title: 'Fish Tank', year: 2009 },
+  { title: 'Certified Copy', year: 2010 },
+  { title: 'In Bruges', year: 2008 },
+  { title: 'The Favourite', year: 2018 },
+  { title: 'Amour', year: 2012 },
+  { title: 'Son of Saul', year: 2015 },
+  { title: 'The White Ribbon', year: 2009 },
+  { title: 'Holy Motors', year: 2012 },
+  { title: 'Under the Skin', year: 2013 },
+  { title: 'The Worst Person in the World', year: 2021 },
+  { title: 'Drive My Car', year: 2021 },
+  { title: 'Spencer', year: 2021 },
+  { title: 'The Lighthouse', year: 2019 },
+  { title: 'Midsommar', year: 2019 },
+  { title: 'Hereditary', year: 2018 },
+  { title: 'The Handmaiden', year: 2016 },
+  { title: 'Carol', year: 2015 },
+  { title: 'Inside Llewyn Davis', year: 2013 },
+  { title: 'Before Midnight', year: 2013 },
+  { title: 'Blue Is the Warmest Color', year: 2013 },
+  { title: 'Spring Breakers', year: 2012 },
+  { title: 'Beasts of the Southern Wild', year: 2012 },
+  { title: 'The Artist', year: 2011 },
+  { title: 'Melancholia', year: 2011 },
+  { title: 'Black Swan', year: 2010 },
+  { title: 'Blue Valentine', year: 2010 },
+  { title: 'A Prophet', year: 2009 },
+  { title: 'Hunger', year: 2008 },
+];
+
 // Creative category names for clustering
 const CATEGORY_THEMES = [
   { id: 'intimate-portraits', names: ['Intimate Portraits', 'Souls Unveiled', 'Inner Worlds', 'Personal Landscapes'], icon: '🎨' },
@@ -42,6 +121,163 @@ const CATEGORY_THEMES = [
   { id: 'nordic', names: ['Nordic Perspectives', 'Scandinavian Visions', 'Northern Lights', 'Baltic Shores'], icon: '❄️' },
   { id: 'love', names: ['Love in Brief', 'Hearts Entwined', 'Romantic Encounters', 'Affairs of the Heart'], icon: '💕' },
 ];
+
+// TMDB API functions
+async function searchTMDB(title: string, year: number): Promise<TMDBMovie | null> {
+  if (!TMDB_API_KEY) return null;
+
+  try {
+    const url = `${TMDB_BASE}/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(title)}&year=${year}`;
+    const response = await fetch(url);
+    if (!response.ok) return null;
+
+    const data: TMDBSearchResult = await response.json();
+    return data.results[0] || null;
+  } catch {
+    return null;
+  }
+}
+
+async function getTMDBMovieDetails(movieId: number): Promise<TMDBMovie | null> {
+  if (!TMDB_API_KEY) return null;
+
+  try {
+    const url = `${TMDB_BASE}/movie/${movieId}?api_key=${TMDB_API_KEY}`;
+    const response = await fetch(url);
+    if (!response.ok) return null;
+
+    return await response.json();
+  } catch {
+    return null;
+  }
+}
+
+async function getSwedishStreamingProviders(movieId: number): Promise<string[]> {
+  if (!TMDB_API_KEY) return [];
+
+  try {
+    const url = `${TMDB_BASE}/movie/${movieId}/watch/providers?api_key=${TMDB_API_KEY}`;
+    const response = await fetch(url);
+    if (!response.ok) return [];
+
+    const data: TMDBWatchProviders = await response.json();
+    const seProviders = data.results?.SE?.flatrate || [];
+    return seProviders.map(p => p.provider_name);
+  } catch {
+    return [];
+  }
+}
+
+function mapProviderToService(provider: string): string | null {
+  const mapping: { [key: string]: string } = {
+    'MUBI': 'MUBI',
+    'Netflix': 'Netflix',
+    'Amazon Prime Video': 'Prime Video',
+    'Disney Plus': 'Disney+',
+    'SVT Play': 'SVT Play',
+    'HBO Max': 'HBO Max',
+    'Viaplay': 'Viaplay',
+  };
+
+  for (const [key, value] of Object.entries(mapping)) {
+    if (provider.toLowerCase().includes(key.toLowerCase())) {
+      return value;
+    }
+  }
+  return null;
+}
+
+function generateStreamingLink(service: string, title: string, tmdbId: number): string {
+  const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+
+  switch (service) {
+    case 'MUBI':
+      return `https://mubi.com/sv/films/${slug}`;
+    case 'Netflix':
+      return `https://www.netflix.com/se/title/${tmdbId}`;
+    case 'Prime Video':
+      return `https://www.primevideo.com/-/sv/detail/${slug}`;
+    case 'Disney+':
+      return `https://www.disneyplus.com/sv-se/movies/${slug}`;
+    default:
+      return '';
+  }
+}
+
+async function discoverNewMovies(existingMovies: Movie[]): Promise<Movie[]> {
+  if (!TMDB_API_KEY) {
+    console.log('TMDB_API_KEY not set - skipping content discovery');
+    return [];
+  }
+
+  const existingTitles = new Set(existingMovies.map(m => m.title.toLowerCase()));
+  const newMovies: Movie[] = [];
+
+  console.log(`Checking ${FILMS_TO_CHECK.length} potential films...`);
+
+  for (const film of FILMS_TO_CHECK) {
+    // Skip if already in catalog
+    if (existingTitles.has(film.title.toLowerCase())) {
+      continue;
+    }
+
+    // Search TMDB
+    const searchResult = await searchTMDB(film.title, film.year);
+    if (!searchResult) continue;
+
+    // Get full details including runtime
+    const details = await getTMDBMovieDetails(searchResult.id);
+    if (!details || !details.runtime) continue;
+
+    // Check runtime constraint
+    if (details.runtime > MAX_RUNTIME_MINUTES) {
+      continue;
+    }
+
+    // Check Swedish streaming availability
+    const providers = await getSwedishStreamingProviders(searchResult.id);
+    if (providers.length === 0) continue;
+
+    // Find a supported streaming service
+    let service: string | null = null;
+    for (const provider of providers) {
+      service = mapProviderToService(provider);
+      if (service) break;
+    }
+    if (!service) continue;
+
+    // Generate link and create movie entry
+    const link = generateStreamingLink(service, details.title, searchResult.id);
+    if (!link) continue;
+
+    // Verify the link works
+    const linkCheck = await checkLink(link, service);
+    if (!linkCheck.ok) continue;
+
+    const newMovie: Movie = {
+      id: details.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+      title: details.title,
+      year: parseInt(details.release_date?.slice(0, 4) || String(film.year)),
+      runtime: `${details.runtime} min`,
+      rating: Math.round(details.vote_average * 10) / 10,
+      poster: details.poster_path ? `${TMDB_IMG_BASE}/w500${details.poster_path}` : '',
+      backdrop: details.backdrop_path ? `${TMDB_IMG_BASE}/w1280${details.backdrop_path}` : '',
+      description: details.overview?.slice(0, 200) + (details.overview?.length > 200 ? '...' : '') || '',
+      service,
+      link,
+    };
+
+    if (newMovie.poster && newMovie.description) {
+      newMovies.push(newMovie);
+      console.log(`  + Found: ${newMovie.title} (${newMovie.runtime}) on ${service}`);
+    }
+
+    // Rate limiting
+    await new Promise(r => setTimeout(r, 300));
+  }
+
+  return newMovies;
+}
 
 async function checkLink(url: string, service: string): Promise<{ ok: boolean; status?: number }> {
   try {
@@ -401,11 +637,21 @@ async function main() {
   const { categories } = parseMoviesFromFile(fileContent);
 
   // Get all movies
-  const allMovies: Movie[] = categories.flatMap(c => c.movies);
-  console.log(`Total movies: ${allMovies.length}`);
+  let allMovies: Movie[] = categories.flatMap(c => c.movies);
+  console.log(`Current catalog: ${allMovies.length} movies`);
 
-  // Step 1: Check links and remove broken ones
-  console.log('\n--- Step 1: Checking Links ---');
+  // Step 1: Discover new content
+  console.log('\n--- Step 1: Discovering New Content ---');
+  const newMovies = await discoverNewMovies(allMovies);
+  if (newMovies.length > 0) {
+    console.log(`\nFound ${newMovies.length} new qualifying film(s)!`);
+    allMovies = [...allMovies, ...newMovies];
+  } else {
+    console.log('No new films found matching criteria');
+  }
+
+  // Step 2: Check links and remove broken ones
+  console.log('\n--- Step 2: Validating Links ---');
   const linkResults = await checkAllLinks(allMovies);
   const brokenLinks = linkResults.filter(r => r.status === 'broken');
 
@@ -423,12 +669,6 @@ async function main() {
     movie => !brokenLinks.some(b => b.movie.id === movie.id)
   );
 
-  // Step 2: Check for new content (placeholder - would need API integration)
-  console.log('\n--- Step 2: Checking for New Content ---');
-  console.log('(New content discovery requires TMDB/JustWatch API integration)');
-  // TODO: Integrate with TMDB API and JustWatch to find new films
-  // that match the Perec Test criteria (< 105 min, standalone, closed ending)
-
   // Step 3: Re-cluster movies with creative titles
   console.log('\n--- Step 3: Re-clustering Movies ---');
   const newCategories = clusterMovies(workingMovies);
@@ -444,13 +684,13 @@ async function main() {
 
   // Summary
   console.log('\n=== Summary ===');
+  console.log(`New movies added: ${newMovies.length}`);
   console.log(`Movies removed (broken links): ${brokenLinks.length}`);
-  console.log(`Movies remaining: ${workingMovies.length}`);
+  console.log(`Total movies: ${workingMovies.length}`);
   console.log(`Categories: ${newCategories.length}`);
 
   // Return exit code based on changes
-  const hasChanges = brokenLinks.length > 0;
-  process.exit(hasChanges ? 0 : 0); // Always exit 0, changes tracked via git
+  process.exit(0);
 }
 
 main().catch(error => {
