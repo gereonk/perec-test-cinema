@@ -110,16 +110,27 @@ const FILMS_TO_CHECK = [
   { title: 'Hunger', year: 2008 },
 ];
 
-// Creative category names for clustering
+// TMDB genre IDs for discovery
+const DISCOVERY_GENRES = [
+  { id: 18, name: 'Drama' },
+  { id: 53, name: 'Thriller' },
+  { id: 10749, name: 'Romance' },
+  { id: 27, name: 'Horror' },
+  { id: 16, name: 'Animation' },
+  { id: 80, name: 'Crime' },
+  { id: 9648, name: 'Mystery' },
+];
+
+// Creative category names for clustering (expanded for daily variety)
 const CATEGORY_THEMES = [
-  { id: 'intimate-portraits', names: ['Intimate Portraits', 'Souls Unveiled', 'Inner Worlds', 'Personal Landscapes'], icon: '🎨' },
-  { id: 'tension', names: ['Tension in Tight Spaces', 'Edge of Your Seat', 'Pressure Cooker', 'Contained Chaos'], icon: '💥' },
-  { id: 'poetry', names: ['The Poetry of Brevity', 'Moments Crystallized', 'Time Suspended', 'Fleeting Beauty'], icon: '✨' },
-  { id: 'quiet', names: ['Quiet Revelations', 'Whispered Truths', 'Still Waters', 'The Sound of Silence'], icon: '🌙' },
-  { id: 'coming-of-age', names: ['Coming of Age, Contained', 'Growing Pains', 'Youth in Focus', 'Becoming'], icon: '🌱' },
-  { id: 'classics', names: ['Timeless Classics', 'Eternal Cinema', 'Masters of Brevity', 'Enduring Visions'], icon: '🎬' },
-  { id: 'nordic', names: ['Nordic Perspectives', 'Scandinavian Visions', 'Northern Lights', 'Baltic Shores'], icon: '❄️' },
-  { id: 'love', names: ['Love in Brief', 'Hearts Entwined', 'Romantic Encounters', 'Affairs of the Heart'], icon: '💕' },
+  { id: 'intimate-portraits', names: ['Intimate Portraits', 'Souls Unveiled', 'Inner Worlds', 'Personal Landscapes', 'Character Studies', 'Human Conditions', 'Lives Examined', 'Portraits in Motion'], icon: '🎨' },
+  { id: 'tension', names: ['Tension in Tight Spaces', 'Edge of Your Seat', 'Pressure Cooker', 'Contained Chaos', 'Nerve-Wracking', 'Pulse Pounders', 'Gripping Tales', 'White Knuckle Cinema'], icon: '💥' },
+  { id: 'poetry', names: ['The Poetry of Brevity', 'Moments Crystallized', 'Time Suspended', 'Fleeting Beauty', 'Visual Poetry', 'Cinematic Haiku', 'Ephemeral Art', 'Delicate Frames'], icon: '✨' },
+  { id: 'quiet', names: ['Quiet Revelations', 'Whispered Truths', 'Still Waters', 'The Sound of Silence', 'Contemplative Cinema', 'Meditative Moments', 'Slow Burn', 'Gentle Observations'], icon: '🌙' },
+  { id: 'coming-of-age', names: ['Coming of Age, Contained', 'Growing Pains', 'Youth in Focus', 'Becoming', 'Adolescent Dreams', 'First Steps', 'Young Hearts', 'Rites of Passage'], icon: '🌱' },
+  { id: 'classics', names: ['Timeless Classics', 'Eternal Cinema', 'Masters of Brevity', 'Enduring Visions', 'Golden Age Gems', 'Vintage Treasures', 'Cinema Heritage', 'Ageless Stories'], icon: '🎬' },
+  { id: 'nordic', names: ['Nordic Perspectives', 'Scandinavian Visions', 'Northern Lights', 'Baltic Shores', 'Frozen Tales', 'Midnight Sun Cinema', 'Nordic Noir', 'Tales from the North'], icon: '❄️' },
+  { id: 'love', names: ['Love in Brief', 'Hearts Entwined', 'Romantic Encounters', 'Affairs of the Heart', 'Tender Moments', 'Love Stories', 'Passion Plays', 'Amorous Tales'], icon: '💕' },
 ];
 
 // TMDB API functions
@@ -168,6 +179,124 @@ async function getSwedishStreamingProviders(movieId: number): Promise<string[]> 
   }
 }
 
+// Dynamic film discovery from TMDB trending and genres
+interface FilmCandidate {
+  title: string;
+  year: number;
+  tmdbId: number;
+}
+
+async function discoverTrendingFilms(): Promise<FilmCandidate[]> {
+  if (!TMDB_API_KEY) return [];
+
+  const candidates: FilmCandidate[] = [];
+
+  try {
+    // Get trending movies this week
+    const trendingUrl = `${TMDB_BASE}/trending/movie/week?api_key=${TMDB_API_KEY}`;
+    const trendingResponse = await fetch(trendingUrl);
+    if (trendingResponse.ok) {
+      const data: TMDBSearchResult = await trendingResponse.json();
+      for (const movie of data.results.slice(0, 20)) {
+        const details = await getTMDBMovieDetails(movie.id);
+        if (details && details.runtime && details.runtime <= MAX_RUNTIME_MINUTES && details.vote_average >= 6.5) {
+          candidates.push({
+            title: details.title,
+            year: parseInt(details.release_date?.slice(0, 4) || '0'),
+            tmdbId: movie.id,
+          });
+        }
+        await new Promise(r => setTimeout(r, 100)); // Rate limiting
+      }
+    }
+
+    // Get popular movies
+    const popularUrl = `${TMDB_BASE}/movie/popular?api_key=${TMDB_API_KEY}`;
+    const popularResponse = await fetch(popularUrl);
+    if (popularResponse.ok) {
+      const data: TMDBSearchResult = await popularResponse.json();
+      for (const movie of data.results.slice(0, 20)) {
+        const details = await getTMDBMovieDetails(movie.id);
+        if (details && details.runtime && details.runtime <= MAX_RUNTIME_MINUTES && details.vote_average >= 6.5) {
+          if (!candidates.some(c => c.tmdbId === movie.id)) {
+            candidates.push({
+              title: details.title,
+              year: parseInt(details.release_date?.slice(0, 4) || '0'),
+              tmdbId: movie.id,
+            });
+          }
+        }
+        await new Promise(r => setTimeout(r, 100)); // Rate limiting
+      }
+    }
+  } catch (error) {
+    console.log('Error fetching trending/popular films:', error);
+  }
+
+  return candidates;
+}
+
+async function discoverByGenre(): Promise<FilmCandidate[]> {
+  if (!TMDB_API_KEY) return [];
+
+  const candidates: FilmCandidate[] = [];
+
+  for (const genre of DISCOVERY_GENRES) {
+    try {
+      const url = `${TMDB_BASE}/discover/movie?api_key=${TMDB_API_KEY}&with_genres=${genre.id}&with_runtime.lte=${MAX_RUNTIME_MINUTES}&vote_average.gte=6.5&vote_count.gte=100&sort_by=vote_average.desc`;
+      const response = await fetch(url);
+      if (!response.ok) continue;
+
+      const data: TMDBSearchResult = await response.json();
+      for (const movie of data.results.slice(0, 10)) {
+        if (!candidates.some(c => c.tmdbId === movie.id)) {
+          candidates.push({
+            title: movie.title,
+            year: parseInt(movie.release_date?.slice(0, 4) || '0'),
+            tmdbId: movie.id,
+          });
+        }
+      }
+
+      await new Promise(r => setTimeout(r, 200)); // Rate limiting between genres
+    } catch (error) {
+      console.log(`Error fetching ${genre.name} films:`, error);
+    }
+  }
+
+  return candidates;
+}
+
+async function discoverFilmCandidates(): Promise<FilmCandidate[]> {
+  console.log('Discovering films from TMDB...');
+
+  const [trending, byGenre] = await Promise.all([
+    discoverTrendingFilms(),
+    discoverByGenre(),
+  ]);
+
+  // Merge and deduplicate
+  const allCandidates = [...trending];
+  for (const candidate of byGenre) {
+    if (!allCandidates.some(c => c.tmdbId === candidate.tmdbId)) {
+      allCandidates.push(candidate);
+    }
+  }
+
+  // Also add curated films
+  for (const film of FILMS_TO_CHECK) {
+    if (!allCandidates.some(c => c.title.toLowerCase() === film.title.toLowerCase())) {
+      allCandidates.push({ title: film.title, year: film.year, tmdbId: 0 });
+    }
+  }
+
+  console.log(`  Found ${trending.length} trending/popular candidates`);
+  console.log(`  Found ${byGenre.length} genre-based candidates`);
+  console.log(`  Total unique candidates: ${allCandidates.length}`);
+
+  return allCandidates;
+}
+
 function mapProviderToService(provider: string): string | null {
   const mapping: { [key: string]: string } = {
     'MUBI': 'MUBI',
@@ -204,7 +333,7 @@ function generateStreamingLink(service: string, title: string, tmdbId: number): 
   }
 }
 
-async function discoverNewMovies(existingMovies: Movie[]): Promise<Movie[]> {
+async function discoverNewMovies(existingMovies: Movie[], candidates: FilmCandidate[]): Promise<Movie[]> {
   if (!TMDB_API_KEY) {
     console.log('TMDB_API_KEY not set - skipping content discovery');
     return [];
@@ -213,20 +342,24 @@ async function discoverNewMovies(existingMovies: Movie[]): Promise<Movie[]> {
   const existingTitles = new Set(existingMovies.map(m => m.title.toLowerCase()));
   const newMovies: Movie[] = [];
 
-  console.log(`Checking ${FILMS_TO_CHECK.length} potential films...`);
+  console.log(`Checking ${candidates.length} potential films for Swedish streaming...`);
 
-  for (const film of FILMS_TO_CHECK) {
+  for (const film of candidates) {
     // Skip if already in catalog
     if (existingTitles.has(film.title.toLowerCase())) {
       continue;
     }
 
-    // Search TMDB
-    const searchResult = await searchTMDB(film.title, film.year);
-    if (!searchResult) continue;
+    // Get TMDB ID if we don't have it (for curated films)
+    let tmdbId = film.tmdbId;
+    if (!tmdbId) {
+      const searchResult = await searchTMDB(film.title, film.year);
+      if (!searchResult) continue;
+      tmdbId = searchResult.id;
+    }
 
     // Get full details including runtime
-    const details = await getTMDBMovieDetails(searchResult.id);
+    const details = await getTMDBMovieDetails(tmdbId);
     if (!details || !details.runtime) continue;
 
     // Check runtime constraint
@@ -235,7 +368,7 @@ async function discoverNewMovies(existingMovies: Movie[]): Promise<Movie[]> {
     }
 
     // Check Swedish streaming availability
-    const providers = await getSwedishStreamingProviders(searchResult.id);
+    const providers = await getSwedishStreamingProviders(tmdbId);
     if (providers.length === 0) continue;
 
     // Find a supported streaming service
@@ -247,7 +380,7 @@ async function discoverNewMovies(existingMovies: Movie[]): Promise<Movie[]> {
     if (!service) continue;
 
     // Generate link and create movie entry
-    const link = generateStreamingLink(service, details.title, searchResult.id);
+    const link = generateStreamingLink(service, details.title, tmdbId);
     if (!link) continue;
 
     // Verify the link works
@@ -427,9 +560,13 @@ function generateCategoryName(themeId: string): string {
   const theme = CATEGORY_THEMES.find(t => t.id === themeId);
   if (!theme) return themeId;
 
-  // Pick a random name from the options
-  const randomIndex = Math.floor(Math.random() * theme.names.length);
-  return theme.names[randomIndex];
+  // Use date-based seed for deterministic but daily-changing names
+  const today = new Date();
+  const dateSeed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+  const themeIndex = CATEGORY_THEMES.findIndex(t => t.id === themeId);
+  const nameIndex = (dateSeed + themeIndex) % theme.names.length;
+
+  return theme.names[nameIndex];
 }
 
 function clusterMovies(movies: Movie[]): Category[] {
@@ -640,9 +777,13 @@ async function main() {
   let allMovies: Movie[] = categories.flatMap(c => c.movies);
   console.log(`Current catalog: ${allMovies.length} movies`);
 
-  // Step 1: Discover new content
-  console.log('\n--- Step 1: Discovering New Content ---');
-  const newMovies = await discoverNewMovies(allMovies);
+  // Step 0: Discover film candidates from TMDB (trending + genres)
+  console.log('\n--- Step 0: Discovering Film Candidates ---');
+  const candidates = await discoverFilmCandidates();
+
+  // Step 1: Check candidates for Swedish streaming availability
+  console.log('\n--- Step 1: Checking Swedish Streaming Availability ---');
+  const newMovies = await discoverNewMovies(allMovies, candidates);
   if (newMovies.length > 0) {
     console.log(`\nFound ${newMovies.length} new qualifying film(s)!`);
     allMovies = [...allMovies, ...newMovies];
