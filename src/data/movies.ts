@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Inner Worlds",
+    name: "Lives Examined",
     icon: "🎨",
     movies: [
       {
@@ -162,12 +162,24 @@ export const categories: Category[] = [
         service: "Disney+",
         link: "https://www.disneyplus.com/sv-se/movies/the-grand-budapest-hotel/1RW10E8yCYDB",
         featured: true
+      },
+      {
+        id: "beasts-of-the-southern-wild",
+        title: "Beasts of the Southern Wild",
+        year: 2012,
+        runtime: "93 min",
+        rating: 6.8,
+        poster: `${TMDB_IMG}/w500/nQJmWekGYlXhezGUb21xFfEfwhH.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/7LWLPvyfLSb2oOlgWwAwUqA8uKo.jpg`,
+        description: "Hushpuppy, an intrepid six-year-old girl, lives with her father, Wink, in ",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/beasts-of-the-southern-wild"
       }
     ]
   },
   {
     id: "coming-of-age",
-    name: "Coming of Age, Contained",
+    name: "Youth in Focus",
     icon: "🌱",
     movies: [
       {
@@ -271,7 +283,7 @@ export const categories: Category[] = [
   },
   {
     id: "classics",
-    name: "Timeless Classics",
+    name: "Enduring Visions",
     icon: "🎬",
     movies: [
       {
@@ -346,12 +358,24 @@ export const categories: Category[] = [
         service: "Netflix",
         link: "https://www.netflix.com/se/title/60032294",
         featured: true
+      },
+      {
+        id: "perfect-blue",
+        title: "Perfect Blue",
+        year: 1998,
+        runtime: "82 min",
+        rating: 8.3,
+        poster: `${TMDB_IMG}/w500/6WTiOCfDPP8XV4jqfloiVWf7KHq.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/1YRtgjLb5xxUb2rsNRnr54Oc0B2.jpg`,
+        description: "Rising pop star Mima quits singing to pursue a career as an actress. After she takes up a role on a popular detective show, her handlers and collaborators begin turning up murdered. Harboring feelings...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/perfect-blue"
       }
     ]
   },
   {
     id: "love",
-    name: "Hearts Entwined",
+    name: "Love Stories",
     icon: "💕",
     movies: [
       {
@@ -401,24 +425,12 @@ export const categories: Category[] = [
         description: "A couple from Hong Kong takes a trip to Argentina but breaks up on their journey. On the way to the Iguazu Falls, they try to deal with their confusing relationship.",
         service: "MUBI",
         link: "https://mubi.com/sv/films/happy-together"
-      },
-      {
-        id: "beasts-of-the-southern-wild",
-        title: "Beasts of the Southern Wild",
-        year: 2012,
-        runtime: "93 min",
-        rating: 6.8,
-        poster: `${TMDB_IMG}/w500/nQJmWekGYlXhezGUb21xFfEfwhH.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/7LWLPvyfLSb2oOlgWwAwUqA8uKo.jpg`,
-        description: "Hushpuppy, an intrepid six-year-old girl, lives with her father, Wink, in 'the Bathtub', a southern Delta community at the edge of the world. Wink’s tough love prepares her for the unraveling of the u...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/beasts-of-the-southern-wild"
       }
     ]
   },
   {
     id: "nordic",
-    name: "Scandinavian Visions",
+    name: "Frozen Tales",
     icon: "❄️",
     movies: [
       {
@@ -450,7 +462,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Fleeting Beauty",
+    name: "The Poetry of Brevity",
     icon: "✨",
     movies: [
       {
@@ -470,7 +482,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Quiet Revelations",
+    name: "Whispered Truths",
     icon: "🌙",
     movies: [
       {
