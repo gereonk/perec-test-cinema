@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Inner Worlds",
+    name: "Personal Landscapes",
     icon: "🎨",
     movies: [
       {
@@ -179,7 +179,7 @@ export const categories: Category[] = [
   },
   {
     id: "coming-of-age",
-    name: "Young Hearts",
+    name: "Rites of Passage",
     icon: "🌱",
     movies: [
       {
@@ -283,7 +283,7 @@ export const categories: Category[] = [
   },
   {
     id: "classics",
-    name: "Ageless Stories",
+    name: "Timeless Classics",
     icon: "🎬",
     movies: [
       {
@@ -375,7 +375,7 @@ export const categories: Category[] = [
   },
   {
     id: "love",
-    name: "Hearts Entwined",
+    name: "Romantic Encounters",
     icon: "💕",
     movies: [
       {
@@ -430,7 +430,7 @@ export const categories: Category[] = [
   },
   {
     id: "nordic",
-    name: "Nordic Perspectives",
+    name: "Scandinavian Visions",
     icon: "❄️",
     movies: [
       {
@@ -462,7 +462,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Visual Poetry",
+    name: "Cinematic Haiku",
     icon: "✨",
     movies: [
       {
@@ -482,7 +482,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Meditative Moments",
+    name: "Slow Burn",
     icon: "🌙",
     movies: [
       {
