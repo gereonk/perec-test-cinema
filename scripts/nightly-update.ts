@@ -3,6 +3,7 @@ import * as path from 'path';
 
 const MOVIES_FILE = path.join(__dirname, '../src/data/movies.ts');
 const MAX_RUNTIME_MINUTES = 105;
+const MIN_RATING = 6.0; // Lowered from 6.5 for more discovery
 const TMDB_API_KEY = process.env.TMDB_API_KEY || '';
 const TMDB_BASE = 'https://api.themoviedb.org/3';
 const TMDB_IMG_BASE = 'https://image.tmdb.org/t/p';
@@ -78,6 +79,7 @@ interface TMDBWatchProviders {
 
 // Curated list of critically acclaimed short films to check for availability
 const FILMS_TO_CHECK = [
+  // Original list
   { title: 'Stranger by the Lake', year: 2013 },
   { title: 'Victoria', year: 2015 },
   { title: 'Fish Tank', year: 2009 },
@@ -108,6 +110,151 @@ const FILMS_TO_CHECK = [
   { title: 'Blue Valentine', year: 2010 },
   { title: 'A Prophet', year: 2009 },
   { title: 'Hunger', year: 2008 },
+  // Recent acclaimed films
+  { title: 'Past Lives', year: 2023 },
+  { title: 'The Zone of Interest', year: 2023 },
+  { title: 'Anatomy of a Fall', year: 2023 },
+  { title: 'Poor Things', year: 2023 },
+  { title: 'Monster', year: 2023 },
+  { title: 'The Holdovers', year: 2023 },
+  { title: 'May December', year: 2023 },
+  { title: 'All of Us Strangers', year: 2023 },
+  { title: 'Aftersun', year: 2022 },
+  { title: 'Tár', year: 2022 },
+  { title: 'Decision to Leave', year: 2022 },
+  { title: 'Triangle of Sadness', year: 2022 },
+  { title: 'EO', year: 2022 },
+  { title: 'Saint Omer', year: 2022 },
+  { title: 'The Banshees of Inisherin', year: 2022 },
+  // Classic short films
+  { title: 'Rope', year: 1948 },
+  { title: 'High Noon', year: 1952 },
+  { title: 'Rashomon', year: 1950 },
+  { title: 'Ikiru', year: 1952 },
+  { title: 'Tokyo Story', year: 1953 },
+  { title: 'The 400 Blows', year: 1959 },
+  { title: 'Breathless', year: 1960 },
+  { title: 'La Jetée', year: 1962 },
+  { title: 'Au Hasard Balthazar', year: 1966 },
+  { title: 'Persona', year: 1966 },
+  { title: 'The Battle of Algiers', year: 1966 },
+  { title: 'Le Samouraï', year: 1967 },
+  { title: 'Night of the Living Dead', year: 1968 },
+  { title: 'My Night at Mauds', year: 1969 },
+  // 70s-80s gems
+  { title: 'The Conversation', year: 1974 },
+  { title: 'Jeanne Dielman', year: 1975 },
+  { title: 'Eraserhead', year: 1977 },
+  { title: 'Days of Heaven', year: 1978 },
+  { title: 'The Elephant Man', year: 1980 },
+  { title: 'My Dinner with Andre', year: 1981 },
+  { title: 'Koyaanisqatsi', year: 1982 },
+  { title: 'Sans Soleil', year: 1983 },
+  { title: 'Paris, Texas', year: 1984 },
+  { title: 'Stranger Than Paradise', year: 1984 },
+  { title: 'Blue Velvet', year: 1986 },
+  { title: 'Wings of Desire', year: 1987 },
+  // 90s indie & international
+  { title: 'My Own Private Idaho', year: 1991 },
+  { title: 'The Double Life of Veronique', year: 1991 },
+  { title: 'Reservoir Dogs', year: 1992 },
+  { title: 'Three Colors: Blue', year: 1993 },
+  { title: 'Three Colors: White', year: 1994 },
+  { title: 'Three Colors: Red', year: 1994 },
+  { title: 'Clerks', year: 1994 },
+  { title: 'Chungking Express', year: 1994 },
+  { title: 'Before Sunrise', year: 1995 },
+  { title: 'Safe', year: 1995 },
+  { title: 'Trainspotting', year: 1996 },
+  { title: 'Happy Together', year: 1997 },
+  { title: 'Taste of Cherry', year: 1997 },
+  { title: 'The Ice Storm', year: 1997 },
+  { title: 'Run Lola Run', year: 1998 },
+  { title: 'Rushmore', year: 1998 },
+  { title: 'The Celebration', year: 1998 },
+  // 2000s
+  { title: 'Requiem for a Dream', year: 2000 },
+  { title: 'Amélie', year: 2001 },
+  { title: 'Donnie Darko', year: 2001 },
+  { title: 'Y Tu Mamá También', year: 2001 },
+  { title: 'City of God', year: 2002 },
+  { title: 'Talk to Her', year: 2002 },
+  { title: 'Elephant', year: 2003 },
+  { title: 'Lost in Translation', year: 2003 },
+  { title: 'Spring, Summer, Fall, Winter... and Spring', year: 2003 },
+  { title: 'Oldboy', year: 2003 },
+  { title: 'Eternal Sunshine of the Spotless Mind', year: 2004 },
+  { title: '2046', year: 2004 },
+  { title: 'A History of Violence', year: 2005 },
+  { title: 'Cache', year: 2005 },
+  { title: 'The Squid and the Whale', year: 2005 },
+  { title: 'Half Nelson', year: 2006 },
+  { title: 'Pan\'s Labyrinth', year: 2006 },
+  { title: 'The Lives of Others', year: 2006 },
+  { title: '4 Months, 3 Weeks and 2 Days', year: 2007 },
+  { title: 'Persepolis', year: 2007 },
+  { title: 'Let the Right One In', year: 2008 },
+  { title: 'Waltz with Bashir', year: 2008 },
+  { title: 'A Serious Man', year: 2009 },
+  { title: 'The Secret in Their Eyes', year: 2009 },
+  // 2010s acclaimed
+  { title: 'A Separation', year: 2011 },
+  { title: 'Drive', year: 2011 },
+  { title: 'The Turin Horse', year: 2011 },
+  { title: 'Shame', year: 2011 },
+  { title: 'Moonrise Kingdom', year: 2012 },
+  { title: 'The Master', year: 2012 },
+  { title: 'Leviathan', year: 2012 },
+  { title: 'Her', year: 2013 },
+  { title: 'The Great Beauty', year: 2013 },
+  { title: 'Ida', year: 2013 },
+  { title: 'Whiplash', year: 2014 },
+  { title: 'Mommy', year: 2014 },
+  { title: 'Force Majeure', year: 2014 },
+  { title: 'Ex Machina', year: 2014 },
+  { title: 'The Duke of Burgundy', year: 2014 },
+  { title: 'The Assassin', year: 2015 },
+  { title: 'Room', year: 2015 },
+  { title: 'Mustang', year: 2015 },
+  { title: 'Tangerine', year: 2015 },
+  { title: 'Embrace of the Serpent', year: 2015 },
+  { title: 'Manchester by the Sea', year: 2016 },
+  { title: 'Moonlight', year: 2016 },
+  { title: 'Toni Erdmann', year: 2016 },
+  { title: 'Elle', year: 2016 },
+  { title: 'The Lobster', year: 2015 },
+  { title: 'A Ghost Story', year: 2017 },
+  { title: 'Call Me by Your Name', year: 2017 },
+  { title: 'The Florida Project', year: 2017 },
+  { title: 'Lady Bird', year: 2017 },
+  { title: 'Phantom Thread', year: 2017 },
+  { title: 'The Killing of a Sacred Deer', year: 2017 },
+  { title: 'First Reformed', year: 2017 },
+  { title: 'Burning', year: 2018 },
+  { title: 'Cold War', year: 2018 },
+  { title: 'Roma', year: 2018 },
+  { title: 'Shoplifters', year: 2018 },
+  { title: 'Portrait of a Lady on Fire', year: 2019 },
+  { title: 'Parasite', year: 2019 },
+  { title: 'Pain and Glory', year: 2019 },
+  { title: 'Marriage Story', year: 2019 },
+  { title: 'Bait', year: 2019 },
+  // Recent gems
+  { title: 'Minari', year: 2020 },
+  { title: 'Never Rarely Sometimes Always', year: 2020 },
+  { title: 'First Cow', year: 2019 },
+  { title: 'Nomadland', year: 2020 },
+  { title: 'Another Round', year: 2020 },
+  { title: 'The Father', year: 2020 },
+  { title: 'Promising Young Woman', year: 2020 },
+  { title: 'Sound of Metal', year: 2019 },
+  { title: 'Judas and the Black Messiah', year: 2021 },
+  { title: 'The Power of the Dog', year: 2021 },
+  { title: 'Licorice Pizza', year: 2021 },
+  { title: 'C\'mon C\'mon', year: 2021 },
+  { title: 'Memoria', year: 2021 },
+  { title: 'Parallel Mothers', year: 2021 },
+  { title: 'The Hand of God', year: 2021 },
 ];
 
 // TMDB genre IDs for discovery
@@ -119,6 +266,11 @@ const DISCOVERY_GENRES = [
   { id: 16, name: 'Animation' },
   { id: 80, name: 'Crime' },
   { id: 9648, name: 'Mystery' },
+  { id: 99, name: 'Documentary' },
+  { id: 35, name: 'Comedy' },
+  { id: 878, name: 'Science Fiction' },
+  { id: 10752, name: 'War' },
+  { id: 36, name: 'History' },
 ];
 
 // Creative category names for clustering (expanded for daily variety)
@@ -199,7 +351,7 @@ async function discoverTrendingFilms(): Promise<FilmCandidate[]> {
       const data: TMDBSearchResult = await trendingResponse.json();
       for (const movie of data.results.slice(0, 20)) {
         const details = await getTMDBMovieDetails(movie.id);
-        if (details && details.runtime && details.runtime <= MAX_RUNTIME_MINUTES && details.vote_average >= 6.5) {
+        if (details && details.runtime && details.runtime <= MAX_RUNTIME_MINUTES && details.vote_average >= MIN_RATING) {
           candidates.push({
             title: details.title,
             year: parseInt(details.release_date?.slice(0, 4) || '0'),
@@ -217,7 +369,7 @@ async function discoverTrendingFilms(): Promise<FilmCandidate[]> {
       const data: TMDBSearchResult = await popularResponse.json();
       for (const movie of data.results.slice(0, 20)) {
         const details = await getTMDBMovieDetails(movie.id);
-        if (details && details.runtime && details.runtime <= MAX_RUNTIME_MINUTES && details.vote_average >= 6.5) {
+        if (details && details.runtime && details.runtime <= MAX_RUNTIME_MINUTES && details.vote_average >= MIN_RATING) {
           if (!candidates.some(c => c.tmdbId === movie.id)) {
             candidates.push({
               title: details.title,
@@ -243,7 +395,7 @@ async function discoverByGenre(): Promise<FilmCandidate[]> {
 
   for (const genre of DISCOVERY_GENRES) {
     try {
-      const url = `${TMDB_BASE}/discover/movie?api_key=${TMDB_API_KEY}&with_genres=${genre.id}&with_runtime.lte=${MAX_RUNTIME_MINUTES}&vote_average.gte=6.5&vote_count.gte=100&sort_by=vote_average.desc`;
+      const url = `${TMDB_BASE}/discover/movie?api_key=${TMDB_API_KEY}&with_genres=${genre.id}&with_runtime.lte=${MAX_RUNTIME_MINUTES}&vote_average.gte=${MIN_RATING}&vote_count.gte=50&sort_by=vote_average.desc`;
       const response = await fetch(url);
       if (!response.ok) continue;
 
