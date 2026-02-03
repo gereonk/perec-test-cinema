@@ -532,12 +532,10 @@ async function discoverNewMovies(existingMovies: Movie[], candidates: FilmCandid
     if (!service) continue;
 
     // Generate link and create movie entry
+    // Trust TMDB streaming data - don't verify links for new discoveries
+    // (MUBI and others may use different URL slugs than we generate)
     const link = generateStreamingLink(service, details.title, tmdbId);
     if (!link) continue;
-
-    // Verify the link works
-    const linkCheck = await checkLink(link, service);
-    if (!linkCheck.ok) continue;
 
     const newMovie: Movie = {
       id: details.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
