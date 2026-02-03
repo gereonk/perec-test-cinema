@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Inner Worlds",
+    name: "Personal Landscapes",
     icon: "🎨",
     movies: [
       {
@@ -63,18 +63,6 @@ export const categories: Category[] = [
         description: "A college student",
         service: "MUBI",
         link: "https://mubi.com/sv/films/shiva-baby"
-      },
-      {
-        id: "gravity",
-        title: "Gravity",
-        year: 2013,
-        runtime: "91 min",
-        rating: 7.7,
-        poster: `${TMDB_IMG}/w500/kZ2nZw8D681aphje8NJi8EfbL1U.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/kZ2nZw8D681aphje8NJi8EfbL1U.jpg`,
-        description: "A medical engineer and an astronaut work together to survive after an accident leaves them adrift in space. Alfonso Cuarón",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/Gravity/0MW3B1AN9EBQN5F5825WH831MA"
       },
       {
         id: "in-the-mood-for-love",
@@ -179,7 +167,7 @@ export const categories: Category[] = [
   },
   {
     id: "coming-of-age",
-    name: "Young Hearts",
+    name: "Rites of Passage",
     icon: "🌱",
     movies: [
       {
@@ -218,18 +206,6 @@ export const categories: Category[] = [
         description: "A pair of young lovers flee their New England town, which causes a local search party to fan out to find them. Wes Anderson",
         service: "Netflix",
         link: "https://www.netflix.com/se/title/70242565"
-      },
-      {
-        id: "lost-in-translation",
-        title: "Lost in Translation",
-        year: 2003,
-        runtime: "102 min",
-        rating: 7.7,
-        poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
-        description: "A fading movie star and a neglected young woman form an unlikely bond in Tokyo. Sofia Coppola",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/Lost-in-Translation/0KABCI41NIHS9E0M0B1AGLZ99M"
       },
       {
         id: "all-of-us-strangers",
@@ -283,7 +259,7 @@ export const categories: Category[] = [
   },
   {
     id: "classics",
-    name: "Ageless Stories",
+    name: "Timeless Classics",
     icon: "🎬",
     movies: [
       {
@@ -335,18 +311,6 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/run-lola-run"
       },
       {
-        id: "the-truman-show",
-        title: "The Truman Show",
-        year: 1998,
-        runtime: "103 min",
-        rating: 8.2,
-        poster: `${TMDB_IMG}/w500/vuza0WqY239yBXOadKlGwJsZJFE.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/vuza0WqY239yBXOadKlGwJsZJFE.jpg`,
-        description: "An insurance salesman discovers his entire life is actually a reality TV show. Peter Weir",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/The-Truman-Show/0M6IL8RQZA8OP3943NE5061HOD"
-      },
-      {
         id: "my-neighbor-totoro",
         title: "My Neighbor Totoro",
         year: 1988,
@@ -375,7 +339,7 @@ export const categories: Category[] = [
   },
   {
     id: "love",
-    name: "Hearts Entwined",
+    name: "Romantic Encounters",
     icon: "💕",
     movies: [
       {
@@ -430,7 +394,7 @@ export const categories: Category[] = [
   },
   {
     id: "nordic",
-    name: "Nordic Perspectives",
+    name: "Scandinavian Visions",
     icon: "❄️",
     movies: [
       {
@@ -462,7 +426,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Visual Poetry",
+    name: "Cinematic Haiku",
     icon: "✨",
     movies: [
       {
@@ -482,7 +446,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Meditative Moments",
+    name: "Slow Burn",
     icon: "🌙",
     movies: [
       {
