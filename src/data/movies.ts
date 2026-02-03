@@ -254,6 +254,30 @@ export const categories: Category[] = [
         description: "Two 13-year-old boys share an intense friendship until their classmates",
         service: "MUBI",
         link: "https://mubi.com/sv/films/close-2022"
+      },
+      {
+        id: "eraserhead",
+        title: "Eraserhead",
+        year: 1977,
+        runtime: "89 min",
+        rating: 7.3,
+        poster: `${TMDB_IMG}/w500/mxveW3mGVc0DzLdOmtkZsgd7c3B.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/ApB0mF2d5Oqioi3yxjuogiotSLI.jpg`,
+        description: "First-time father Henry Spencer tries to survive his industrial environment, his angry girlfriend, and the unbearable screams of his newly born mutant child.",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/eraserhead"
+      },
+      {
+        id: "shame",
+        title: "Shame",
+        year: 2011,
+        runtime: "102 min",
+        rating: 6.9,
+        poster: `${TMDB_IMG}/w500/cAWLz9kFv4xc6IsEXTj2DrcqD55.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/AOSzhQfsXIqHPl9JgQvGkBPhYm.jpg`,
+        description: "Brandon, a thirty-something man living in New York, eludes intimacy with women but feeds his deepest desires with a compulsive addiction to sex. When his younger sister temporarily moves into his apar...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/shame"
       }
     ]
   },
@@ -310,6 +334,66 @@ export const categories: Category[] = [
         service: "Netflix",
         link: "https://www.netflix.com/se/title/60032294",
         featured: true
+      },
+      {
+        id: "perfect-blue",
+        title: "Perfect Blue",
+        year: 1998,
+        runtime: "82 min",
+        rating: 8.3,
+        poster: `${TMDB_IMG}/w500/925SaqJIfRCeIt11BzvqPVVg263.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/mHG7dpLb0ZScSY3LpP443IHRmjy.jpg`,
+        description: "Rising pop star Mima quits singing to pursue a career as an actress. After she takes up a role on a popular detective show, her handlers and collaborators begin turning up murdered. Harboring feelings...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/perfect-blue"
+      },
+      {
+        id: "three-colors-blue",
+        title: "Three Colors: Blue",
+        year: 1993,
+        runtime: "98 min",
+        rating: 7.6,
+        poster: `${TMDB_IMG}/w500/33wsWxzsNstI8N7dvuwzFmj1qBd.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/nAyUVvcdOKHmukdgGHZ7xR5er1q.jpg`,
+        description: "The wife of a famous composer survives a car accident that kills her husband and daughter. Now alone, she shakes off her old identity and explores her newfound freedom but finds that she is unbreakabl...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/three-colors-blue"
+      },
+      {
+        id: "three-colors-white",
+        title: "Three Colors: White",
+        year: 1994,
+        runtime: "92 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/fdIet3NSa27gobMbaUml66oCQNT.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/yOpNvGSsT0YECuhhrlGBLIshh0u.jpg`,
+        description: "Polish immigrant Karol Karol finds himself out of a marriage, a job and a country when his French wife, Dominique, divorces him after six months due to his impotence. Forced to leave France after losi...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/three-colors-white"
+      },
+      {
+        id: "three-colors-red",
+        title: "Three Colors: Red",
+        year: 1994,
+        runtime: "100 min",
+        rating: 7.9,
+        poster: `${TMDB_IMG}/w500/JHmsBiX1tjCKqAul1lzC20WcAW.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/pZcoSJUb3Lgr9Rzg2shg1PtTBP9.jpg`,
+        description: "Part-time model Valentine unexpectedly befriends a retired judge after she runs over his dog. At first, the grumpy man shows no concern about the dog, and Valentine decides to keep it. But the two for...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/three-colors-red"
+      },
+      {
+        id: "the-celebration",
+        title: "The Celebration",
+        year: 1998,
+        runtime: "105 min",
+        rating: 7.7,
+        poster: `${TMDB_IMG}/w500/2LRzNq41yrY8EjCnD1S8sCCPvKk.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/7rkgM8yZ49LwYTcka5ETGRJAQ9M.jpg`,
+        description: "The family of a wealthy businessman gather to celebrate his 60th birthday. During the course of the party, his eldest son presents a speech that reveals a devastating secret that turns the night into ...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/the-celebration"
       }
     ]
   },
@@ -362,6 +446,25 @@ export const categories: Category[] = [
         service: "Netflix",
         link: "https://www.netflix.com/se/title/80205227",
         featured: true
+      }
+    ]
+  },
+  {
+    id: "quiet",
+    name: "Slow Burn",
+    icon: "🌙",
+    movies: [
+      {
+        id: "sans-soleil",
+        title: "Sans Soleil",
+        year: 1983,
+        runtime: "100 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/sspJu9K03FZQP8A1cheurkiePD0.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/lns7roobSPQQTF54oSPzkT3qH1q.jpg`,
+        description: "A woman narrates the thoughts of a world traveler, meditations on time and memory expressed in words and images from places as far-flung as Japan, Guinea-Bissau, Iceland, and San Francisco.",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/sans-soleil"
       }
     ]
   }
