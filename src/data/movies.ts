@@ -299,18 +299,6 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/beau-travail"
       },
       {
-        id: "run-lola-run",
-        title: "Run Lola Run",
-        year: 1998,
-        runtime: "81 min",
-        rating: 7.6,
-        poster: `${TMDB_IMG}/w500/v0giIi4bTILVhNhJajet3WWY3FA.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/v0giIi4bTILVhNhJajet3WWY3FA.jpg`,
-        description: "Lola has 20 minutes to find 100,000 Deutschmarks to save her boyfriend",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/run-lola-run"
-      },
-      {
         id: "my-neighbor-totoro",
         title: "My Neighbor Totoro",
         year: 1988,
@@ -322,73 +310,6 @@ export const categories: Category[] = [
         service: "Netflix",
         link: "https://www.netflix.com/se/title/60032294",
         featured: true
-      },
-      {
-        id: "perfect-blue",
-        title: "Perfect Blue",
-        year: 1998,
-        runtime: "82 min",
-        rating: 8.3,
-        poster: `${TMDB_IMG}/w500/6WTiOCfDPP8XV4jqfloiVWf7KHq.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/1YRtgjLb5xxUb2rsNRnr54Oc0B2.jpg`,
-        description: "Rising pop star Mima quits singing to pursue a career as an actress. After she takes up a role on a popular detective show, her handlers and collaborators begin turning up murdered. Harboring feelings...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/perfect-blue"
-      }
-    ]
-  },
-  {
-    id: "love",
-    name: "Romantic Encounters",
-    icon: "💕",
-    movies: [
-      {
-        id: "cold-war",
-        title: "Cold War",
-        year: 2018,
-        runtime: "89 min",
-        rating: 7.5,
-        poster: `${TMDB_IMG}/w500/6rbS8oPIgUMhQgIX8oGVTtlNgLR.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/6rbS8oPIgUMhQgIX8oGVTtlNgLR.jpg`,
-        description: "A passionate love story between two people of different backgrounds and temperaments, who are fatefully mismatched and yet condemned to each other. Set against the backdrop of the Cold War in 1950s Poland, Berlin, Yugoslavia and Paris.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/zimna-wojna"
-      },
-      {
-        id: "tangerine",
-        title: "Tangerine",
-        year: 2015,
-        runtime: "88 min",
-        rating: 7.1,
-        poster: `${TMDB_IMG}/w500/EKLR5c61XQzBTeMokFrmS3kdt8.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/EKLR5c61XQzBTeMokFrmS3kdt8.jpg`,
-        description: "A transgender sex worker tears through Los Angeles on Christmas Eve searching for the pimp who broke her heart. Sean Baker",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/tangerine-2015"
-      },
-      {
-        id: "chungking-express",
-        title: "Chungking Express",
-        year: 1994,
-        runtime: "102 min",
-        rating: 8,
-        poster: `${TMDB_IMG}/w500/43I9DcNoCzpyzK8JCkJYpHqHqGG.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/43I9DcNoCzpyzK8JCkJYpHqHqGG.jpg`,
-        description: "Two lovelorn Hong Kong cops fall for two very different women in this romantic comedy drama.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/chungking-express"
-      },
-      {
-        id: "happy-together",
-        title: "Happy Together",
-        year: 1997,
-        runtime: "96 min",
-        rating: 7.7,
-        poster: `${TMDB_IMG}/w500/kO4KjUkQOfWSBw06Bdl7m6AlEP7.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/kO4KjUkQOfWSBw06Bdl7m6AlEP7.jpg`,
-        description: "A couple from Hong Kong takes a trip to Argentina but breaks up on their journey. On the way to the Iguazu Falls, they try to deal with their confusing relationship.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/happy-together"
       }
     ]
   },
@@ -440,26 +361,6 @@ export const categories: Category[] = [
         description: "In 2002, an artistically inclined seventeen-year-old girl comes of age in Sacramento, California.",
         service: "Netflix",
         link: "https://www.netflix.com/se/title/80205227",
-        featured: true
-      }
-    ]
-  },
-  {
-    id: "quiet",
-    name: "Slow Burn",
-    icon: "🌙",
-    movies: [
-      {
-        id: "aftersun",
-        title: "Aftersun",
-        year: 2022,
-        runtime: "101 min",
-        rating: 7.7,
-        poster: `${TMDB_IMG}/w500/evKz85EKouVbIr51zy5fOtpNRPg.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/evKz85EKouVbIr51zy5fOtpNRPg.jpg`,
-        description: "Sophie reflects on the shared joy and private melancholy of a holiday she took with her father twenty years earlier. Memories real and imagined fill the gaps between as she tries to reconcile the father she knew with the man she didn",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/aftersun",
         featured: true
       }
     ]
