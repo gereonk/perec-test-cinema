@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Character Studies",
+    name: "Human Conditions",
     icon: "🎨",
     movies: [
       {
@@ -167,7 +167,7 @@ export const categories: Category[] = [
   },
   {
     id: "coming-of-age",
-    name: "Coming of Age, Contained",
+    name: "Growing Pains",
     icon: "🌱",
     movies: [
       {
@@ -278,24 +278,12 @@ export const categories: Category[] = [
         description: "Brandon, a thirty-something man living in New York, eludes intimacy with women but feeds his deepest desires with a compulsive addiction to sex. When his younger sister temporarily moves into his apar...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/shame"
-      },
-      {
-        id: "the-double-life-of-v-ronique",
-        title: "The Double Life of Véronique",
-        year: 1991,
-        runtime: "98 min",
-        rating: 7.5,
-        poster: `${TMDB_IMG}/w500/oqRyO9xrNBRaxqF9pCHHgLuaATx.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/vjsFyeCf5W5rxCFpS9MIAEZJkIG.jpg`,
-        description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
       }
     ]
   },
   {
     id: "classics",
-    name: "Eternal Cinema",
+    name: "Masters of Brevity",
     icon: "🎬",
     movies: [
       {
@@ -411,7 +399,7 @@ export const categories: Category[] = [
   },
   {
     id: "nordic",
-    name: "Northern Lights",
+    name: "Baltic Shores",
     icon: "❄️",
     movies: [
       {
@@ -443,7 +431,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Ephemeral Art",
+    name: "Delicate Frames",
     icon: "✨",
     movies: [
       {
@@ -463,7 +451,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Gentle Observations",
+    name: "Quiet Revelations",
     icon: "🌙",
     movies: [
       {
