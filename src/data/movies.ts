@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Human Conditions",
+    name: "Lives Examined",
     icon: "🎨",
     movies: [
       {
@@ -162,12 +162,48 @@ export const categories: Category[] = [
         description: "Hushpuppy, an intrepid six-year-old girl, lives with her father, Wink, in ",
         service: "MUBI",
         link: "https://mubi.com/sv/films/beasts-of-the-southern-wild"
+      },
+      {
+        id: "counterattack",
+        title: "Counterattack",
+        year: 2025,
+        runtime: "85 min",
+        rating: 8.3,
+        poster: `${TMDB_IMG}/w500/38I76hGcFY6xB47pjm7pZwkfuAF.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/deUWVEgNh2IGjShyymZhaYP40ye.jpg`,
+        description: "When a hostage rescue mission creates a new enemy, Capt. Guerrero and his elite soldiers must face an ambush by a criminal group.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/1356039"
+      },
+      {
+        id: "emicida-amarelo-it-s-all-for-yesterday",
+        title: "Emicida: AmarElo - It's All for Yesterday",
+        year: 2020,
+        runtime: "89 min",
+        rating: 8.6,
+        poster: `${TMDB_IMG}/w500/afVApltOyuDj5Dgq8OB99SqJ6v9.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/y9Xa7GOcQZ00sOozjRgD6pMN2pq.jpg`,
+        description: "Between scenes from his concert in São Paulo's oft-inaccessible Theatro Municipal, rapper and activist Emicida celebrates the rich legacy of Black Brazilian culture.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/765613"
+      },
+      {
+        id: "franco-escamilla-por-la-an-cdota",
+        title: "Franco Escamilla: por la anécdota",
+        year: 2018,
+        runtime: "66 min",
+        rating: 8.6,
+        poster: `${TMDB_IMG}/w500/iT5LzAICUgviiSY0d5461MKNSOc.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/rxQjuLpnvve3nuDOeWSqhKTdSTj.jpg`,
+        description: "Mexican stand-up comedian Franco Escamilla draws his jokes from real-life experiences -- and he's willing to do anything for new material. He's not afraid to make generalizations about how men bathe. ...",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/529414"
       }
     ]
   },
   {
     id: "coming-of-age",
-    name: "Growing Pains",
+    name: "Youth in Focus",
     icon: "🌱",
     movies: [
       {
@@ -278,12 +314,48 @@ export const categories: Category[] = [
         description: "Brandon, a thirty-something man living in New York, eludes intimacy with women but feeds his deepest desires with a compulsive addiction to sex. When his younger sister temporarily moves into his apar...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/shame"
+      },
+      {
+        id: "grave-of-the-fireflies",
+        title: "Grave of the Fireflies",
+        year: 1988,
+        runtime: "89 min",
+        rating: 8.4,
+        poster: `${TMDB_IMG}/w500/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/aHaqZpOL7UyVu0nKqp3SMz0o2E1.jpg`,
+        description: "In the final months of World War II, 14-year-old Seita and his sister Setsuko are orphaned when their mother is killed during an air raid in Kobe, Japan. After a falling out with their aunt, they move...",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/12477"
+      },
+      {
+        id: "monster",
+        title: "Monster",
+        year: 2023,
+        runtime: "84 min",
+        rating: 5.1,
+        poster: `${TMDB_IMG}/w500/OsWKxswXx2TOx87ZRxdOciu0uB.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/6fG1jNA1CoMqaJUejJyAqkMYCh6.jpg`,
+        description: "After being abducted and taken to a desolate house, a girl sets out to rescue her friend and escape from their malicious kidnapper.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/1203484"
+      },
+      {
+        id: "lost-in-translation",
+        title: "Lost in Translation",
+        year: 2003,
+        runtime: "102 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/3ZY8iEsv5XKiMU19T1MIvHET5Ih.jpg`,
+        description: "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's co...",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/153"
       }
     ]
   },
   {
     id: "classics",
-    name: "Masters of Brevity",
+    name: "Enduring Visions",
     icon: "🎬",
     movies: [
       {
@@ -394,12 +466,24 @@ export const categories: Category[] = [
         description: "The family of a wealthy businessman gather to celebrate his 60th birthday. During the course of the party, his eldest son presents a speech that reveals a devastating secret that turns the night into ...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/the-celebration"
+      },
+      {
+        id: "neon-genesis-evangelion-the-end-of-evangelion",
+        title: "Neon Genesis Evangelion: The End of Evangelion",
+        year: 1997,
+        runtime: "87 min",
+        rating: 8.3,
+        poster: `${TMDB_IMG}/w500/j6G24dqI4WgUtChhWjfnI4lnmiK.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/xLMJCCSatxENpHO9rLW9yD8A12C.jpg`,
+        description: "SEELE orders an all-out attack on NERV, aiming to destroy the Evas before Gendo can advance his own plans for the Human Instrumentality Project. Shinji is pushed to the limits of his sanity as he is f...",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/18491"
       }
     ]
   },
   {
     id: "nordic",
-    name: "Baltic Shores",
+    name: "Frozen Tales",
     icon: "❄️",
     movies: [
       {
@@ -431,7 +515,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Delicate Frames",
+    name: "The Poetry of Brevity",
     icon: "✨",
     movies: [
       {
@@ -451,7 +535,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Quiet Revelations",
+    name: "Whispered Truths",
     icon: "🌙",
     movies: [
       {
