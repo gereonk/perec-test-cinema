@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Lives Examined",
+    name: "Portraits in Motion",
     icon: "🎨",
     movies: [
       {
@@ -177,13 +177,13 @@ export const categories: Category[] = [
       },
       {
         id: "emicida-amarelo-it-s-all-for-yesterday",
-        title: "Emicida: AmarElo - It's All for Yesterday",
+        title: "Emicida: AmarElo - It",
         year: 2020,
         runtime: "89 min",
         rating: 8.6,
         poster: `${TMDB_IMG}/w500/afVApltOyuDj5Dgq8OB99SqJ6v9.jpg`,
         backdrop: `${TMDB_IMG}/w1280/y9Xa7GOcQZ00sOozjRgD6pMN2pq.jpg`,
-        description: "Between scenes from his concert in São Paulo's oft-inaccessible Theatro Municipal, rapper and activist Emicida celebrates the rich legacy of Black Brazilian culture.",
+        description: "Between scenes from his concert in São Paulo",
         service: "Netflix",
         link: "https://www.netflix.com/se/title/765613"
       },
@@ -195,15 +195,27 @@ export const categories: Category[] = [
         rating: 8.6,
         poster: `${TMDB_IMG}/w500/iT5LzAICUgviiSY0d5461MKNSOc.jpg`,
         backdrop: `${TMDB_IMG}/w1280/rxQjuLpnvve3nuDOeWSqhKTdSTj.jpg`,
-        description: "Mexican stand-up comedian Franco Escamilla draws his jokes from real-life experiences -- and he's willing to do anything for new material. He's not afraid to make generalizations about how men bathe. ...",
+        description: "Mexican stand-up comedian Franco Escamilla draws his jokes from real-life experiences -- and he",
         service: "Netflix",
         link: "https://www.netflix.com/se/title/529414"
+      },
+      {
+        id: "emicida-amarelo-it-s-all-for-yesterday",
+        title: "Emicida: AmarElo - It's All for Yesterday",
+        year: 2020,
+        runtime: "89 min",
+        rating: 8.6,
+        poster: `${TMDB_IMG}/w500/afVApltOyuDj5Dgq8OB99SqJ6v9.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/y9Xa7GOcQZ00sOozjRgD6pMN2pq.jpg`,
+        description: "Between scenes from his concert in São Paulo's oft-inaccessible Theatro Municipal, rapper and activist Emicida celebrates the rich legacy of Black Brazilian culture.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/765613"
       }
     ]
   },
   {
     id: "coming-of-age",
-    name: "Youth in Focus",
+    name: "Becoming",
     icon: "🌱",
     movies: [
       {
@@ -347,15 +359,27 @@ export const categories: Category[] = [
         rating: 7.4,
         poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
         backdrop: `${TMDB_IMG}/w1280/3ZY8iEsv5XKiMU19T1MIvHET5Ih.jpg`,
-        description: "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's co...",
+        description: "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other",
         service: "Netflix",
         link: "https://www.netflix.com/se/title/153"
+      },
+      {
+        id: "the-double-life-of-v-ronique",
+        title: "The Double Life of Véronique",
+        year: 1991,
+        runtime: "98 min",
+        rating: 7.5,
+        poster: `${TMDB_IMG}/w500/oqRyO9xrNBRaxqF9pCHHgLuaATx.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/vjsFyeCf5W5rxCFpS9MIAEZJkIG.jpg`,
+        description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
       }
     ]
   },
   {
     id: "classics",
-    name: "Enduring Visions",
+    name: "Golden Age Gems",
     icon: "🎬",
     movies: [
       {
@@ -483,7 +507,7 @@ export const categories: Category[] = [
   },
   {
     id: "nordic",
-    name: "Frozen Tales",
+    name: "Midnight Sun Cinema",
     icon: "❄️",
     movies: [
       {
@@ -515,7 +539,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "The Poetry of Brevity",
+    name: "Moments Crystallized",
     icon: "✨",
     movies: [
       {
@@ -535,7 +559,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Whispered Truths",
+    name: "Still Waters",
     icon: "🌙",
     movies: [
       {
