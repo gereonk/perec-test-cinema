@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Souls Unveiled",
+    name: "Inner Worlds",
     icon: "🎨",
     movies: [
       {
@@ -225,6 +225,18 @@ export const categories: Category[] = [
       },
       {
         id: "emicida-amarelo-it-s-all-for-yesterday",
+        title: "Emicida: AmarElo - It",
+        year: 2020,
+        runtime: "89 min",
+        rating: 8.6,
+        poster: `${TMDB_IMG}/w500/afVApltOyuDj5Dgq8OB99SqJ6v9.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/y9Xa7GOcQZ00sOozjRgD6pMN2pq.jpg`,
+        description: "Between scenes from his concert in São Paulo",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/765613"
+      },
+      {
+        id: "emicida-amarelo-it-s-all-for-yesterday",
         title: "Emicida: AmarElo - It's All for Yesterday",
         year: 2020,
         runtime: "89 min",
@@ -239,7 +251,7 @@ export const categories: Category[] = [
   },
   {
     id: "coming-of-age",
-    name: "First Steps",
+    name: "Young Hearts",
     icon: "🌱",
     movies: [
       {
@@ -391,7 +403,7 @@ export const categories: Category[] = [
   },
   {
     id: "classics",
-    name: "Cinema Heritage",
+    name: "Ageless Stories",
     icon: "🎬",
     movies: [
       {
@@ -519,7 +531,7 @@ export const categories: Category[] = [
   },
   {
     id: "nordic",
-    name: "Tales from the North",
+    name: "Nordic Perspectives",
     icon: "❄️",
     movies: [
       {
@@ -551,7 +563,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Fleeting Beauty",
+    name: "Visual Poetry",
     icon: "✨",
     movies: [
       {
@@ -571,7 +583,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Contemplative Cinema",
+    name: "Meditative Moments",
     icon: "🌙",
     movies: [
       {
