@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Inner Worlds",
+    name: "Personal Landscapes",
     icon: "🎨",
     movies: [
       {
@@ -237,6 +237,18 @@ export const categories: Category[] = [
       },
       {
         id: "emicida-amarelo-it-s-all-for-yesterday",
+        title: "Emicida: AmarElo - It",
+        year: 2020,
+        runtime: "89 min",
+        rating: 8.6,
+        poster: `${TMDB_IMG}/w500/afVApltOyuDj5Dgq8OB99SqJ6v9.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/y9Xa7GOcQZ00sOozjRgD6pMN2pq.jpg`,
+        description: "Between scenes from his concert in São Paulo",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/765613"
+      },
+      {
+        id: "emicida-amarelo-it-s-all-for-yesterday",
         title: "Emicida: AmarElo - It's All for Yesterday",
         year: 2020,
         runtime: "89 min",
@@ -251,7 +263,7 @@ export const categories: Category[] = [
   },
   {
     id: "coming-of-age",
-    name: "Young Hearts",
+    name: "Rites of Passage",
     icon: "🌱",
     movies: [
       {
@@ -398,12 +410,24 @@ export const categories: Category[] = [
         description: "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other",
         service: "Netflix",
         link: "https://www.netflix.com/se/title/153"
+      },
+      {
+        id: "the-double-life-of-v-ronique",
+        title: "The Double Life of Véronique",
+        year: 1991,
+        runtime: "98 min",
+        rating: 7.5,
+        poster: `${TMDB_IMG}/w500/oqRyO9xrNBRaxqF9pCHHgLuaATx.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/vjsFyeCf5W5rxCFpS9MIAEZJkIG.jpg`,
+        description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
       }
     ]
   },
   {
     id: "classics",
-    name: "Ageless Stories",
+    name: "Timeless Classics",
     icon: "🎬",
     movies: [
       {
@@ -531,7 +555,7 @@ export const categories: Category[] = [
   },
   {
     id: "nordic",
-    name: "Nordic Perspectives",
+    name: "Scandinavian Visions",
     icon: "❄️",
     movies: [
       {
@@ -563,7 +587,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Visual Poetry",
+    name: "Cinematic Haiku",
     icon: "✨",
     movies: [
       {
@@ -583,7 +607,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Meditative Moments",
+    name: "Slow Burn",
     icon: "🌙",
     movies: [
       {
