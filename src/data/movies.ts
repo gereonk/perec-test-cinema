@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Character Studies",
+    name: "Human Conditions",
     icon: "🎨",
     movies: [
       {
@@ -167,7 +167,7 @@ export const categories: Category[] = [
   },
   {
     id: "coming-of-age",
-    name: "Coming of Age, Contained",
+    name: "Growing Pains",
     icon: "🌱",
     movies: [
       {
@@ -283,7 +283,7 @@ export const categories: Category[] = [
   },
   {
     id: "classics",
-    name: "Eternal Cinema",
+    name: "Masters of Brevity",
     icon: "🎬",
     movies: [
       {
@@ -399,7 +399,7 @@ export const categories: Category[] = [
   },
   {
     id: "nordic",
-    name: "Northern Lights",
+    name: "Baltic Shores",
     icon: "❄️",
     movies: [
       {
@@ -431,7 +431,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Ephemeral Art",
+    name: "Delicate Frames",
     icon: "✨",
     movies: [
       {
@@ -451,7 +451,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Gentle Observations",
+    name: "Quiet Revelations",
     icon: "🌙",
     movies: [
       {
