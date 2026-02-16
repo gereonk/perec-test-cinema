@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Portraits in Motion",
+    name: "Intimate Portraits",
     icon: "🎨",
     movies: [
       {
@@ -167,7 +167,7 @@ export const categories: Category[] = [
   },
   {
     id: "coming-of-age",
-    name: "Becoming",
+    name: "Adolescent Dreams",
     icon: "🌱",
     movies: [
       {
@@ -283,7 +283,7 @@ export const categories: Category[] = [
   },
   {
     id: "classics",
-    name: "Golden Age Gems",
+    name: "Vintage Treasures",
     icon: "🎬",
     movies: [
       {
@@ -399,7 +399,7 @@ export const categories: Category[] = [
   },
   {
     id: "nordic",
-    name: "Midnight Sun Cinema",
+    name: "Nordic Noir",
     icon: "❄️",
     movies: [
       {
@@ -431,7 +431,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Moments Crystallized",
+    name: "Time Suspended",
     icon: "✨",
     movies: [
       {
@@ -451,7 +451,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Still Waters",
+    name: "The Sound of Silence",
     icon: "🌙",
     movies: [
       {
