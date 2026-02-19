@@ -8,6 +8,15 @@ const TMDB_API_KEY = process.env.TMDB_API_KEY || '';
 const TMDB_BASE = 'https://api.themoviedb.org/3';
 const TMDB_IMG_BASE = 'https://image.tmdb.org/t/p';
 
+// Films that don't meet Perec Test criteria (stand-up, concerts, sequels, docs, etc.)
+const BLOCKLIST = [
+  'franco escamilla: por la anécdota',
+  'emicida: amarelo - it\'s all for yesterday',
+  'neon genesis evangelion: the end of evangelion',
+  'square one',
+  'counterattack',
+];
+
 // Swedish streaming service URL patterns for verification
 const STREAMING_SERVICES = {
   MUBI: {
@@ -497,8 +506,11 @@ async function discoverNewMovies(existingMovies: Movie[], candidates: FilmCandid
   console.log(`Checking ${candidates.length} potential films for Swedish streaming...`);
 
   for (const film of candidates) {
-    // Skip if already in catalog
+    // Skip if already in catalog or blocklisted
     if (existingTitles.has(film.title.toLowerCase())) {
+      continue;
+    }
+    if (BLOCKLIST.some(b => film.title.toLowerCase().includes(b))) {
       continue;
     }
 
