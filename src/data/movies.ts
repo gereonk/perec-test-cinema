@@ -162,6 +162,78 @@ export const categories: Category[] = [
         description: "Hushpuppy, an intrepid six-year-old girl, lives with her father, Wink, in ",
         service: "MUBI",
         link: "https://mubi.com/sv/films/beasts-of-the-southern-wild"
+      },
+      {
+        id: "square-one",
+        title: "Square One",
+        year: 2019,
+        runtime: "83 min",
+        rating: 8.6,
+        poster: `${TMDB_IMG}/w500/sVsAd5QoMbzEBt2U3WnzwAGD0dU.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/vX9FALAhEx3OyJN9mbHBMVaQNQA.jpg`,
+        description: "An investigation into the original 1993 Michael Jackson allegations brought by the Chandler family.",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/square-one"
+      },
+      {
+        id: "counterattack",
+        title: "Counterattack",
+        year: 2025,
+        runtime: "85 min",
+        rating: 8.3,
+        poster: `${TMDB_IMG}/w500/38I76hGcFY6xB47pjm7pZwkfuAF.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/deUWVEgNh2IGjShyymZhaYP40ye.jpg`,
+        description: "When a hostage rescue mission creates a new enemy, Capt. Guerrero and his elite soldiers must face an ambush by a criminal group.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/1356039"
+      },
+      {
+        id: "emicida-amarelo-it-s-all-for-yesterday",
+        title: "Emicida: AmarElo - It's All for Yesterday",
+        year: 2020,
+        runtime: "89 min",
+        rating: 8.6,
+        poster: `${TMDB_IMG}/w500/afVApltOyuDj5Dgq8OB99SqJ6v9.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/y9Xa7GOcQZ00sOozjRgD6pMN2pq.jpg`,
+        description: "Between scenes from his concert in São Paulo's oft-inaccessible Theatro Municipal, rapper and activist Emicida celebrates the rich legacy of Black Brazilian culture.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/765613"
+      },
+      {
+        id: "franco-escamilla-por-la-an-cdota",
+        title: "Franco Escamilla: por la anécdota",
+        year: 2018,
+        runtime: "66 min",
+        rating: 8.6,
+        poster: `${TMDB_IMG}/w500/iT5LzAICUgviiSY0d5461MKNSOc.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/rxQjuLpnvve3nuDOeWSqhKTdSTj.jpg`,
+        description: "Mexican stand-up comedian Franco Escamilla draws his jokes from real-life experiences -- and he's willing to do anything for new material. He's not afraid to make generalizations about how men bathe. ...",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/529414"
+      },
+      {
+        id: "wall-e",
+        title: "WALL·E",
+        year: 2008,
+        runtime: "98 min",
+        rating: 8.1,
+        poster: `${TMDB_IMG}/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/fK5ssgvtI43z19FoWigdlqgpLRE.jpg`,
+        description: "After hundreds of years doing what he was built for, WALL•E— a robot designed to clean up the earth—discovers a new purpose in life when he meets a sleek search robot named EVE. EVE comes to realize t...",
+        service: "Disney+",
+        link: "https://www.disneyplus.com/sv-se/movies/wall-e"
+      },
+      {
+        id: "mustang",
+        title: "Mustang",
+        year: 2015,
+        runtime: "97 min",
+        rating: 7.7,
+        poster: `${TMDB_IMG}/w500/8lrsjdydRxhKlKiGuMbbzuFKrdN.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/e26lUsaE9Ni7MmdhaVHVNbuzVyo.jpg`,
+        description: "In a Turkish village, five orphaned sisters live under strict rule while members of their family prepare their arranged marriages.",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/mustang"
       }
     ]
   },
@@ -278,6 +350,66 @@ export const categories: Category[] = [
         description: "Brandon, a thirty-something man living in New York, eludes intimacy with women but feeds his deepest desires with a compulsive addiction to sex. When his younger sister temporarily moves into his apar...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/shame"
+      },
+      {
+        id: "grave-of-the-fireflies",
+        title: "Grave of the Fireflies",
+        year: 1988,
+        runtime: "89 min",
+        rating: 8.4,
+        poster: `${TMDB_IMG}/w500/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/aHaqZpOL7UyVu0nKqp3SMz0o2E1.jpg`,
+        description: "In the final months of World War II, 14-year-old Seita and his sister Setsuko are orphaned when their mother is killed during an air raid in Kobe, Japan. After a falling out with their aunt, they move...",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/12477"
+      },
+      {
+        id: "monster",
+        title: "Monster",
+        year: 2023,
+        runtime: "84 min",
+        rating: 5.1,
+        poster: `${TMDB_IMG}/w500/OsWKxswXx2TOx87ZRxdOciu0uB.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/6fG1jNA1CoMqaJUejJyAqkMYCh6.jpg`,
+        description: "After being abducted and taken to a desolate house, a girl sets out to rescue her friend and escape from their malicious kidnapper.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/1203484"
+      },
+      {
+        id: "the-double-life-of-v-ronique",
+        title: "The Double Life of Véronique",
+        year: 1991,
+        runtime: "98 min",
+        rating: 7.5,
+        poster: `${TMDB_IMG}/w500/oqRyO9xrNBRaxqF9pCHHgLuaATx.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/vjsFyeCf5W5rxCFpS9MIAEZJkIG.jpg`,
+        description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
+      },
+      {
+        id: "rushmore",
+        title: "Rushmore",
+        year: 1998,
+        runtime: "93 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/hSJ6swahAuZ8wM96lHDTwQPXUvZ.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/asC4h9U7pD72bkYcqzgTB7VJYLy.jpg`,
+        description: "When a beautiful first-grade teacher arrives at a prep school, she soon attracts the attention of an ambitious teenager named Max, who quickly falls in love with her. Max turns to the father of two of...",
+        service: "Disney+",
+        link: "https://www.disneyplus.com/sv-se/movies/rushmore"
+      },
+      {
+        id: "lost-in-translation",
+        title: "Lost in Translation",
+        year: 2003,
+        runtime: "102 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/6ITVHoipvxAS8luzKtHTbPaHLtT.jpg`,
+        description: "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's co...",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/153"
       }
     ]
   },
@@ -394,6 +526,42 @@ export const categories: Category[] = [
         description: "The family of a wealthy businessman gather to celebrate his 60th birthday. During the course of the party, his eldest son presents a speech that reveals a devastating secret that turns the night into ...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/the-celebration"
+      },
+      {
+        id: "reservoir-dogs",
+        title: "Reservoir Dogs",
+        year: 1992,
+        runtime: "99 min",
+        rating: 8.1,
+        poster: `${TMDB_IMG}/w500/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/jwt159hXWA9Q5xpBo8hWb3zwLi7.jpg`,
+        description: "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic ...",
+        service: "Disney+",
+        link: "https://www.disneyplus.com/sv-se/movies/reservoir-dogs"
+      },
+      {
+        id: "neon-genesis-evangelion-the-end-of-evangelion",
+        title: "Neon Genesis Evangelion: The End of Evangelion",
+        year: 1997,
+        runtime: "87 min",
+        rating: 8.3,
+        poster: `${TMDB_IMG}/w500/j6G24dqI4WgUtChhWjfnI4lnmiK.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/xLMJCCSatxENpHO9rLW9yD8A12C.jpg`,
+        description: "SEELE orders an all-out attack on NERV, aiming to destroy the Evas before Gendo can advance his own plans for the Human Instrumentality Project. Shinji is pushed to the limits of his sanity as he is f...",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/18491"
+      },
+      {
+        id: "night-of-the-living-dead",
+        title: "Night of the Living Dead",
+        year: 1968,
+        runtime: "96 min",
+        rating: 7.6,
+        poster: `${TMDB_IMG}/w500/rb2NWyb008u1EcKCOyXs2Nmj0ra.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/5KtmBSqFtHY3I9t8lgH27Mc0bqY.jpg`,
+        description: "A ragtag group barricade themselves in an old Pennsylvania farmhouse to remain safe from a horde of flesh-eating ghouls ravaging the Northeast.",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/night-of-the-living-dead"
       }
     ]
   },
