@@ -941,9 +941,13 @@ async function main() {
     console.log('No new films found matching criteria');
   }
 
-  // Step 2: Check links and remove broken ones
-  console.log('\n--- Step 2: Validating Links ---');
-  const linkResults = await checkAllLinks(allMovies);
+  // Step 2: Check links on existing movies only (skip newly discovered)
+  // New discoveries trust TMDB data; generated URLs may not match exact service URLs
+  const newMovieIds = new Set(newMovies.map(m => m.id));
+  const existingMovies = allMovies.filter(m => !newMovieIds.has(m.id));
+
+  console.log('\n--- Step 2: Validating Links (existing catalog) ---');
+  const linkResults = await checkAllLinks(existingMovies);
   const brokenLinks = linkResults.filter(r => r.status === 'broken');
 
   if (brokenLinks.length > 0) {
@@ -955,10 +959,11 @@ async function main() {
     console.log('All links are working!');
   }
 
-  // Filter out broken movies
-  const workingMovies = allMovies.filter(
-    movie => !brokenLinks.some(b => b.movie.id === movie.id)
-  );
+  // Filter out broken movies from existing, keep all new discoveries
+  const workingMovies = [
+    ...existingMovies.filter(movie => !brokenLinks.some(b => b.movie.id === movie.id)),
+    ...newMovies,
+  ];
 
   // Step 3: Re-cluster movies with creative titles
   console.log('\n--- Step 3: Re-clustering Movies ---');
