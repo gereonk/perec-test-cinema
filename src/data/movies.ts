@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Personal Landscapes",
+    name: "Character Studies",
     icon: "🎨",
     movies: [
       {
@@ -164,34 +164,58 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/beasts-of-the-southern-wild"
       },
       {
-        id: "wall-e",
-        title: "WALL·E",
-        year: 2008,
-        runtime: "98 min",
+        id: "kpop-demon-hunters",
+        title: "KPop Demon Hunters",
+        year: 2025,
+        runtime: "96 min",
         rating: 8.1,
-        poster: `${TMDB_IMG}/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/fK5ssgvtI43z19FoWigdlqgpLRE.jpg`,
-        description: "After hundreds of years doing what he was built for, WALL•E— a robot designed to clean up the earth—discovers a new purpose in life when he meets a sleek search robot named EVE. EVE comes to realize t...",
-        service: "Disney+",
-        link: "https://www.disneyplus.com/sv-se/movies/wall-e"
+        poster: `${TMDB_IMG}/w500/zT7Lhw3BhJbMkRqm9Zlx2YGMsY0.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/w3Bi0wygeFQctn6AqFTwhGNXRwL.jpg`,
+        description: "When K-pop superstars Rumi, Mira and Zoey aren't selling out stadiums, they're using their secret powers to protect their fans from supernatural threats.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/803796"
       },
       {
-        id: "mustang",
-        title: "Mustang",
-        year: 2015,
-        runtime: "97 min",
-        rating: 7.7,
-        poster: `${TMDB_IMG}/w500/8lrsjdydRxhKlKiGuMbbzuFKrdN.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/e26lUsaE9Ni7MmdhaVHVNbuzVyo.jpg`,
-        description: "In a Turkish village, five orphaned sisters live under strict rule while members of their family prepare their arranged marriages.",
+        id: "the-bluff",
+        title: "The Bluff",
+        year: 2026,
+        runtime: "102 min",
+        rating: 6.3,
+        poster: `${TMDB_IMG}/w500/w0jwjFmRu2or7LQqh1tSMFjq0At.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/hYgUkH7TusddHRtelj53I6gFOWR.jpg`,
+        description: "When her tranquil life on a remote island is shattered by the return of her vengeful former captain, a skilled ex-pirate must confront her bloody past and unleash her deadly talents to save her family...",
         service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/mustang"
+        link: "https://www.primevideo.com/-/sv/detail/the-bluff"
+      },
+      {
+        id: "flamin-hot",
+        title: "Flamin' Hot",
+        year: 2023,
+        runtime: "99 min",
+        rating: 8,
+        poster: `${TMDB_IMG}/w500/a7KyFMPXj0iY4EoLq1PIGU1WJPw.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/yYEOYzgqPB31mkSsuPdCvXH3zHv.jpg`,
+        description: "The inspiring true story of Richard Montañez, the Frito Lay janitor who channeled his Mexican American heritage and upbringing to turn the iconic Flamin' Hot Cheetos into a snack that disrupted the fo...",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/flamin-hot"
+      },
+      {
+        id: "cold-war",
+        title: "Cold War",
+        year: 2018,
+        runtime: "88 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/6rbS8oPIgUMhQgIX8oGVTtlNgLR.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/dXwXcBGK8LJ6UQVvuWM3qG6m6Co.jpg`,
+        description: "A man and a woman meet in the ruins of post-war Poland. With vastly different backgrounds and temperaments, they are fatally mismatched and yet drawn to each other.",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/cold-war"
       }
     ]
   },
   {
     id: "coming-of-age",
-    name: "Rites of Passage",
+    name: "Coming of Age, Contained",
     icon: "🌱",
     movies: [
       {
@@ -304,16 +328,28 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/shame"
       },
       {
-        id: "grave-of-the-fireflies",
-        title: "Grave of the Fireflies",
-        year: 1988,
-        runtime: "89 min",
-        rating: 8.4,
-        poster: `${TMDB_IMG}/w500/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/aHaqZpOL7UyVu0nKqp3SMz0o2E1.jpg`,
-        description: "In the final months of World War II, 14-year-old Seita and his sister Setsuko are orphaned when their mother is killed during an air raid in Kobe, Japan. After a falling out with their aunt, they move...",
+        id: "monster",
+        title: "Monster",
+        year: 2023,
+        runtime: "84 min",
+        rating: 5,
+        poster: `${TMDB_IMG}/w500/OsWKxswXx2TOx87ZRxdOciu0uB.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/6fG1jNA1CoMqaJUejJyAqkMYCh6.jpg`,
+        description: "After being abducted and taken to a desolate house, a girl sets out to rescue her friend and escape from their malicious kidnapper.",
         service: "Netflix",
-        link: "https://www.netflix.com/se/title/12477"
+        link: "https://www.netflix.com/se/title/1203484"
+      },
+      {
+        id: "the-400-blows",
+        title: "The 400 Blows",
+        year: 1959,
+        runtime: "99 min",
+        rating: 8,
+        poster: `${TMDB_IMG}/w500/12PuU23kkDLvTd0nb8hMlE3oShB.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/cy7ymUaMEWRoig7LWXpfzaaw2vv.jpg`,
+        description: "For young Parisian boy Antoine Doinel, life is one difficult situation after another. Surrounded by inconsiderate adults, including his neglectful parents, Antoine spends his days with his best friend...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/the-400-blows"
       },
       {
         id: "the-double-life-of-v-ronique",
@@ -326,24 +362,12 @@ export const categories: Category[] = [
         description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
-      },
-      {
-        id: "lost-in-translation",
-        title: "Lost in Translation",
-        year: 2003,
-        runtime: "102 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/6ITVHoipvxAS8luzKtHTbPaHLtT.jpg`,
-        description: "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's co...",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/153"
       }
     ]
   },
   {
     id: "classics",
-    name: "Timeless Classics",
+    name: "Eternal Cinema",
     icon: "🎬",
     movies: [
       {
@@ -454,36 +478,12 @@ export const categories: Category[] = [
         description: "The family of a wealthy businessman gather to celebrate his 60th birthday. During the course of the party, his eldest son presents a speech that reveals a devastating secret that turns the night into ...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/the-celebration"
-      },
-      {
-        id: "reservoir-dogs",
-        title: "Reservoir Dogs",
-        year: 1992,
-        runtime: "99 min",
-        rating: 8.1,
-        poster: `${TMDB_IMG}/w500/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/jwt159hXWA9Q5xpBo8hWb3zwLi7.jpg`,
-        description: "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic ...",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/reservoir-dogs"
-      },
-      {
-        id: "night-of-the-living-dead",
-        title: "Night of the Living Dead",
-        year: 1968,
-        runtime: "96 min",
-        rating: 7.6,
-        poster: `${TMDB_IMG}/w500/rb2NWyb008u1EcKCOyXs2Nmj0ra.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/5KtmBSqFtHY3I9t8lgH27Mc0bqY.jpg`,
-        description: "A ragtag group barricade themselves in an old Pennsylvania farmhouse to remain safe from a horde of flesh-eating ghouls ravaging the Northeast.",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/night-of-the-living-dead"
       }
     ]
   },
   {
     id: "nordic",
-    name: "Scandinavian Visions",
+    name: "Northern Lights",
     icon: "❄️",
     movies: [
       {
@@ -515,7 +515,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Cinematic Haiku",
+    name: "Ephemeral Art",
     icon: "✨",
     movies: [
       {
@@ -530,25 +530,6 @@ export const categories: Category[] = [
         service: "Netflix",
         link: "https://www.netflix.com/se/title/80205227",
         featured: true
-      }
-    ]
-  },
-  {
-    id: "quiet",
-    name: "Slow Burn",
-    icon: "🌙",
-    movies: [
-      {
-        id: "sans-soleil",
-        title: "Sans Soleil",
-        year: 1983,
-        runtime: "100 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/sspJu9K03FZQP8A1cheurkiePD0.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/lns7roobSPQQTF54oSPzkT3qH1q.jpg`,
-        description: "A woman narrates the thoughts of a world traveler, meditations on time and memory expressed in words and images from places as far-flung as Japan, Guinea-Bissau, Iceland, and San Francisco.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/sans-soleil"
       }
     ]
   }
