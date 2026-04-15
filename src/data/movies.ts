@@ -24,8 +24,160 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 
 export const categories: Category[] = [
   {
+    id: "coming-of-age",
+    name: "Becoming",
+    icon: "🌱",
+    movies: [
+      {
+        id: "columbus",
+        title: "Columbus",
+        year: 2017,
+        runtime: "104 min",
+        rating: 7.2,
+        poster: `${TMDB_IMG}/w500/6tk0xmn9k5HjUeXsnhxIa94sFXP.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/6tk0xmn9k5HjUeXsnhxIa94sFXP.jpg`,
+        description: "A Korean-born man finds himself stuck in Columbus, Indiana, where his architect father is in a coma. The man meets a young woman who wants to stay in the city because of her mother and her love of architecture.",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/columbus"
+      },
+      {
+        id: "the-witch",
+        title: "The Witch",
+        year: 2015,
+        runtime: "92 min",
+        rating: 6.9,
+        poster: `${TMDB_IMG}/w500/zap5hpFCWSvdWSuPGAQyjUv2wAC.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/zap5hpFCWSvdWSuPGAQyjUv2wAC.jpg`,
+        description: "A family in 1630s New England is torn apart by the forces of witchcraft, black magic, and possession.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/80037280",
+        featured: true
+      },
+      {
+        id: "moonrise-kingdom",
+        title: "Moonrise Kingdom",
+        year: 2012,
+        runtime: "94 min",
+        rating: 7.8,
+        poster: `${TMDB_IMG}/w500/y4SXcbNl6CEF2t36icuzuBioj7K.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/y4SXcbNl6CEF2t36icuzuBioj7K.jpg`,
+        description: "A pair of young lovers flee their New England town, which causes a local search party to fan out to find them. Wes Anderson",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/70242565"
+      },
+      {
+        id: "all-of-us-strangers",
+        title: "All of Us Strangers",
+        year: 2023,
+        runtime: "105 min",
+        rating: 7.6,
+        poster: `${TMDB_IMG}/w500/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg`,
+        description: "A screenwriter revisits his childhood home and finds his long-dead parents waiting. Andrew Haigh",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/strangers-2022-andrew-haigh"
+      },
+      {
+        id: "the-breakfast-club",
+        title: "The Breakfast Club",
+        year: 1985,
+        runtime: "97 min",
+        rating: 7.8,
+        poster: `${TMDB_IMG}/w500/wM9ErA8UVdcce5P4oefQinN8VVV.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/wM9ErA8UVdcce5P4oefQinN8VVV.jpg`,
+        description: "Five high school students meet in Saturday detention and discover how they have a lot more in common than they thought.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/60029171"
+      },
+      {
+        id: "frances-ha",
+        title: "Frances Ha",
+        year: 2012,
+        runtime: "86 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/jrq1NoKvsxWCcffVOjegiYwloFN.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/jrq1NoKvsxWCcffVOjegiYwloFN.jpg`,
+        description: "A young dancer navigates friendship, ambition, and the gap between who she is and who she wants to be in New York. Noah Baumbach and Greta Gerwig",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/frances-ha"
+      },
+      {
+        id: "close",
+        title: "Close",
+        year: 2022,
+        runtime: "104 min",
+        rating: 7.8,
+        poster: `${TMDB_IMG}/w500/dlMNnWs7Mz8Nk5AC447Ew1tD5pn.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/dlMNnWs7Mz8Nk5AC447Ew1tD5pn.jpg`,
+        description: "Two 13-year-old boys share an intense friendship until their classmates",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/close-2022"
+      },
+      {
+        id: "eraserhead",
+        title: "Eraserhead",
+        year: 1977,
+        runtime: "89 min",
+        rating: 7.3,
+        poster: `${TMDB_IMG}/w500/mxveW3mGVc0DzLdOmtkZsgd7c3B.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/ApB0mF2d5Oqioi3yxjuogiotSLI.jpg`,
+        description: "First-time father Henry Spencer tries to survive his industrial environment, his angry girlfriend, and the unbearable screams of his newly born mutant child.",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/eraserhead"
+      },
+      {
+        id: "shame",
+        title: "Shame",
+        year: 2011,
+        runtime: "102 min",
+        rating: 6.9,
+        poster: `${TMDB_IMG}/w500/cAWLz9kFv4xc6IsEXTj2DrcqD55.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/AOSzhQfsXIqHPl9JgQvGkBPhYm.jpg`,
+        description: "Brandon, a thirty-something man living in New York, eludes intimacy with women but feeds his deepest desires with a compulsive addiction to sex. When his younger sister temporarily moves into his apar...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/shame"
+      },
+      {
+        id: "the-400-blows",
+        title: "The 400 Blows",
+        year: 1959,
+        runtime: "99 min",
+        rating: 8,
+        poster: `${TMDB_IMG}/w500/12PuU23kkDLvTd0nb8hMlE3oShB.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/cy7ymUaMEWRoig7LWXpfzaaw2vv.jpg`,
+        description: "For young Parisian boy Antoine Doinel, life is one difficult situation after another. Surrounded by inconsiderate adults, including his neglectful parents, Antoine spends his days with his best friend...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/the-400-blows"
+      },
+      {
+        id: "monster",
+        title: "Monster",
+        year: 2023,
+        runtime: "84 min",
+        rating: 5,
+        poster: `${TMDB_IMG}/w500/OsWKxswXx2TOx87ZRxdOciu0uB.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/6fG1jNA1CoMqaJUejJyAqkMYCh6.jpg`,
+        description: "After being abducted and taken to a desolate house, a girl sets out to rescue her friend and escape from their malicious kidnapper.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/1203484"
+      },
+      {
+        id: "the-double-life-of-v-ronique",
+        title: "The Double Life of Véronique",
+        year: 1991,
+        runtime: "98 min",
+        rating: 7.5,
+        poster: `${TMDB_IMG}/w500/oqRyO9xrNBRaxqF9pCHHgLuaATx.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/vjsFyeCf5W5rxCFpS9MIAEZJkIG.jpg`,
+        description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
+        service: "MUBI",
+        link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
+      }
+    ]
+  },
+  {
     id: "intimate-portraits",
-    name: "Lives Examined",
+    name: "Portraits in Motion",
     icon: "🎨",
     movies: [
       {
@@ -162,200 +314,12 @@ export const categories: Category[] = [
         description: "Hushpuppy, an intrepid six-year-old girl, lives with her father, Wink, in ",
         service: "MUBI",
         link: "https://mubi.com/sv/films/beasts-of-the-southern-wild"
-      },
-      {
-        id: "thrash",
-        title: "Thrash",
-        year: 2026,
-        runtime: "84 min",
-        rating: 6.1,
-        poster: `${TMDB_IMG}/w500/adk8weka3O5648g3de4z3y4aE7G.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/3ooXDVaz4xHKtwe4lkmF1gNopOC.jpg`,
-        description: "When a Category 5 hurricane decimates a coastal town, the storm surge brings devastation, chaos, and something far more frightening onto shore: hungry sharks.",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/1290417"
-      },
-      {
-        id: "wall-e",
-        title: "WALL·E",
-        year: 2008,
-        runtime: "98 min",
-        rating: 8.1,
-        poster: `${TMDB_IMG}/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/ai2FicMUxLCurVkjtYdSvVDWRmS.jpg`,
-        description: "After hundreds of years doing what he was built for, WALL•E— a robot designed to clean up the earth—discovers a new purpose in life when he meets a sleek search robot named EVE. EVE comes to realize t...",
-        service: "Disney+",
-        link: "https://www.disneyplus.com/sv-se/movies/wall-e"
-      }
-    ]
-  },
-  {
-    id: "coming-of-age",
-    name: "Youth in Focus",
-    icon: "🌱",
-    movies: [
-      {
-        id: "columbus",
-        title: "Columbus",
-        year: 2017,
-        runtime: "104 min",
-        rating: 7.2,
-        poster: `${TMDB_IMG}/w500/6tk0xmn9k5HjUeXsnhxIa94sFXP.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/6tk0xmn9k5HjUeXsnhxIa94sFXP.jpg`,
-        description: "A Korean-born man finds himself stuck in Columbus, Indiana, where his architect father is in a coma. The man meets a young woman who wants to stay in the city because of her mother and her love of architecture.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/columbus"
-      },
-      {
-        id: "the-witch",
-        title: "The Witch",
-        year: 2015,
-        runtime: "92 min",
-        rating: 6.9,
-        poster: `${TMDB_IMG}/w500/zap5hpFCWSvdWSuPGAQyjUv2wAC.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/zap5hpFCWSvdWSuPGAQyjUv2wAC.jpg`,
-        description: "A family in 1630s New England is torn apart by the forces of witchcraft, black magic, and possession.",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/80037280",
-        featured: true
-      },
-      {
-        id: "moonrise-kingdom",
-        title: "Moonrise Kingdom",
-        year: 2012,
-        runtime: "94 min",
-        rating: 7.8,
-        poster: `${TMDB_IMG}/w500/y4SXcbNl6CEF2t36icuzuBioj7K.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/y4SXcbNl6CEF2t36icuzuBioj7K.jpg`,
-        description: "A pair of young lovers flee their New England town, which causes a local search party to fan out to find them. Wes Anderson",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/70242565"
-      },
-      {
-        id: "all-of-us-strangers",
-        title: "All of Us Strangers",
-        year: 2023,
-        runtime: "105 min",
-        rating: 7.6,
-        poster: `${TMDB_IMG}/w500/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg`,
-        description: "A screenwriter revisits his childhood home and finds his long-dead parents waiting. Andrew Haigh",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/strangers-2022-andrew-haigh"
-      },
-      {
-        id: "the-breakfast-club",
-        title: "The Breakfast Club",
-        year: 1985,
-        runtime: "97 min",
-        rating: 7.8,
-        poster: `${TMDB_IMG}/w500/wM9ErA8UVdcce5P4oefQinN8VVV.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/wM9ErA8UVdcce5P4oefQinN8VVV.jpg`,
-        description: "Five high school students meet in Saturday detention and discover how they have a lot more in common than they thought.",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/60029171"
-      },
-      {
-        id: "frances-ha",
-        title: "Frances Ha",
-        year: 2012,
-        runtime: "86 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/jrq1NoKvsxWCcffVOjegiYwloFN.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/jrq1NoKvsxWCcffVOjegiYwloFN.jpg`,
-        description: "A young dancer navigates friendship, ambition, and the gap between who she is and who she wants to be in New York. Noah Baumbach and Greta Gerwig",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/frances-ha"
-      },
-      {
-        id: "close",
-        title: "Close",
-        year: 2022,
-        runtime: "104 min",
-        rating: 7.8,
-        poster: `${TMDB_IMG}/w500/dlMNnWs7Mz8Nk5AC447Ew1tD5pn.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/dlMNnWs7Mz8Nk5AC447Ew1tD5pn.jpg`,
-        description: "Two 13-year-old boys share an intense friendship until their classmates",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/close-2022"
-      },
-      {
-        id: "eraserhead",
-        title: "Eraserhead",
-        year: 1977,
-        runtime: "89 min",
-        rating: 7.3,
-        poster: `${TMDB_IMG}/w500/mxveW3mGVc0DzLdOmtkZsgd7c3B.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/ApB0mF2d5Oqioi3yxjuogiotSLI.jpg`,
-        description: "First-time father Henry Spencer tries to survive his industrial environment, his angry girlfriend, and the unbearable screams of his newly born mutant child.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/eraserhead"
-      },
-      {
-        id: "shame",
-        title: "Shame",
-        year: 2011,
-        runtime: "102 min",
-        rating: 6.9,
-        poster: `${TMDB_IMG}/w500/cAWLz9kFv4xc6IsEXTj2DrcqD55.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/AOSzhQfsXIqHPl9JgQvGkBPhYm.jpg`,
-        description: "Brandon, a thirty-something man living in New York, eludes intimacy with women but feeds his deepest desires with a compulsive addiction to sex. When his younger sister temporarily moves into his apar...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/shame"
-      },
-      {
-        id: "the-400-blows",
-        title: "The 400 Blows",
-        year: 1959,
-        runtime: "99 min",
-        rating: 8,
-        poster: `${TMDB_IMG}/w500/12PuU23kkDLvTd0nb8hMlE3oShB.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/cy7ymUaMEWRoig7LWXpfzaaw2vv.jpg`,
-        description: "For young Parisian boy Antoine Doinel, life is one difficult situation after another. Surrounded by inconsiderate adults, including his neglectful parents, Antoine spends his days with his best friend...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/the-400-blows"
-      },
-      {
-        id: "grave-of-the-fireflies",
-        title: "Grave of the Fireflies",
-        year: 1988,
-        runtime: "89 min",
-        rating: 8.4,
-        poster: `${TMDB_IMG}/w500/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/aHaqZpOL7UyVu0nKqp3SMz0o2E1.jpg`,
-        description: "In the final months of World War II, 14-year-old Seita and his sister Setsuko are orphaned when their mother is killed during an air raid in Kobe, Japan. After a falling out with their aunt, they move...",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/12477"
-      },
-      {
-        id: "the-double-life-of-v-ronique",
-        title: "The Double Life of Véronique",
-        year: 1991,
-        runtime: "98 min",
-        rating: 7.5,
-        poster: `${TMDB_IMG}/w500/oqRyO9xrNBRaxqF9pCHHgLuaATx.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/vjsFyeCf5W5rxCFpS9MIAEZJkIG.jpg`,
-        description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
-      },
-      {
-        id: "lost-in-translation",
-        title: "Lost in Translation",
-        year: 2003,
-        runtime: "102 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/6ITVHoipvxAS8luzKtHTbPaHLtT.jpg`,
-        description: "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's co...",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/153"
       }
     ]
   },
   {
     id: "classics",
-    name: "Enduring Visions",
+    name: "Golden Age Gems",
     icon: "🎬",
     movies: [
       {
@@ -466,36 +430,12 @@ export const categories: Category[] = [
         description: "The family of a wealthy businessman gather to celebrate his 60th birthday. During the course of the party, his eldest son presents a speech that reveals a devastating secret that turns the night into ...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/the-celebration"
-      },
-      {
-        id: "reservoir-dogs",
-        title: "Reservoir Dogs",
-        year: 1992,
-        runtime: "99 min",
-        rating: 8.1,
-        poster: `${TMDB_IMG}/w500/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/jwt159hXWA9Q5xpBo8hWb3zwLi7.jpg`,
-        description: "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic ...",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/reservoir-dogs"
-      },
-      {
-        id: "night-of-the-living-dead",
-        title: "Night of the Living Dead",
-        year: 1968,
-        runtime: "96 min",
-        rating: 7.6,
-        poster: `${TMDB_IMG}/w500/rb2NWyb008u1EcKCOyXs2Nmj0ra.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/5KtmBSqFtHY3I9t8lgH27Mc0bqY.jpg`,
-        description: "A ragtag group barricade themselves in an old Pennsylvania farmhouse to remain safe from a horde of flesh-eating ghouls ravaging the Northeast.",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/night-of-the-living-dead"
       }
     ]
   },
   {
     id: "nordic",
-    name: "Frozen Tales",
+    name: "Midnight Sun Cinema",
     icon: "❄️",
     movies: [
       {
@@ -526,27 +466,8 @@ export const categories: Category[] = [
     ]
   },
   {
-    id: "tension",
-    name: "White Knuckle Cinema",
-    icon: "💥",
-    movies: [
-      {
-        id: "pretty-lethal",
-        title: "Pretty Lethal",
-        year: 2026,
-        runtime: "89 min",
-        rating: 6.9,
-        poster: `${TMDB_IMG}/w500/znTPnXCK3lEQJgqXCvP7e5FUz6f.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/z3bzhmC0CPikWeerUkLO73YvGrC.jpg`,
-        description: "A troupe of ballerinas find themselves fighting for survival as they attempt to escape from a remote inn after their bus breaks down on the way to a dance competition.",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/pretty-lethal"
-      }
-    ]
-  },
-  {
     id: "poetry",
-    name: "The Poetry of Brevity",
+    name: "Moments Crystallized",
     icon: "✨",
     movies: [
       {
@@ -566,7 +487,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Whispered Truths",
+    name: "Still Waters",
     icon: "🌙",
     movies: [
       {
