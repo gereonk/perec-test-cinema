@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Human Conditions",
+    name: "Lives Examined",
     icon: "🎨",
     movies: [
       {
@@ -164,34 +164,22 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/beasts-of-the-southern-wild"
       },
       {
-        id: "vengeance",
-        title: "Vengeance",
-        year: 2026,
-        runtime: "103 min",
-        rating: 6.6,
-        poster: `${TMDB_IMG}/w500/ygWXPL0RS91JyJPNOfK34eV3bRE.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/jJmlCFi5EjpH5vHmOczRiVDm0qS.jpg`,
-        description: "The brutal murder of the wife of “Toro,” a military hero in the special forces, turns him into a man with a single purpose: revenge. After a stroke of fate makes him a millionaire, Carlos transforms h...",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/vengeance"
-      },
-      {
-        id: "flamin-hot",
-        title: "Flamin' Hot",
-        year: 2023,
-        runtime: "99 min",
-        rating: 7.9,
-        poster: `${TMDB_IMG}/w500/a7KyFMPXj0iY4EoLq1PIGU1WJPw.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/yYEOYzgqPB31mkSsuPdCvXH3zHv.jpg`,
-        description: "The inspiring true story of Richard Montañez, the Frito Lay janitor who channeled his Mexican American heritage and upbringing to turn the iconic Flamin' Hot Cheetos into a snack that disrupted the fo...",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/flamin-hot"
+        id: "wall-e",
+        title: "WALL·E",
+        year: 2008,
+        runtime: "98 min",
+        rating: 8.1,
+        poster: `${TMDB_IMG}/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/nYs4ZwnJBK4AgljhvzwNz7fpr3E.jpg`,
+        description: "After hundreds of years doing what he was built for, WALL•E— a robot designed to clean up the earth—discovers a new purpose in life when he meets a sleek search robot named EVE. EVE comes to realize t...",
+        service: "Disney+",
+        link: "https://www.disneyplus.com/sv-se/movies/wall-e"
       }
     ]
   },
   {
     id: "coming-of-age",
-    name: "Growing Pains",
+    name: "Youth in Focus",
     icon: "🌱",
     movies: [
       {
@@ -218,18 +206,6 @@ export const categories: Category[] = [
         service: "Netflix",
         link: "https://www.netflix.com/se/title/80037280",
         featured: true
-      },
-      {
-        id: "moonrise-kingdom",
-        title: "Moonrise Kingdom",
-        year: 2012,
-        runtime: "94 min",
-        rating: 7.8,
-        poster: `${TMDB_IMG}/w500/y4SXcbNl6CEF2t36icuzuBioj7K.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/y4SXcbNl6CEF2t36icuzuBioj7K.jpg`,
-        description: "A pair of young lovers flee their New England town, which causes a local search party to fan out to find them. Wes Anderson",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/70242565"
       },
       {
         id: "all-of-us-strangers",
@@ -316,16 +292,16 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/the-400-blows"
       },
       {
-        id: "monster",
-        title: "Monster",
-        year: 2023,
-        runtime: "84 min",
-        rating: 5.1,
-        poster: `${TMDB_IMG}/w500/OsWKxswXx2TOx87ZRxdOciu0uB.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/6fG1jNA1CoMqaJUejJyAqkMYCh6.jpg`,
-        description: "After being abducted and taken to a desolate house, a girl sets out to rescue her friend and escape from their malicious kidnapper.",
+        id: "grave-of-the-fireflies",
+        title: "Grave of the Fireflies",
+        year: 1988,
+        runtime: "89 min",
+        rating: 8.4,
+        poster: `${TMDB_IMG}/w500/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/aHaqZpOL7UyVu0nKqp3SMz0o2E1.jpg`,
+        description: "In the final months of World War II, 14-year-old Seita and his sister Setsuko are orphaned when their mother is killed during an air raid in Kobe, Japan. After a falling out with their aunt, they move...",
         service: "Netflix",
-        link: "https://www.netflix.com/se/title/1203484"
+        link: "https://www.netflix.com/se/title/12477"
       },
       {
         id: "the-double-life-of-v-ronique",
@@ -338,12 +314,24 @@ export const categories: Category[] = [
         description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
+      },
+      {
+        id: "lost-in-translation",
+        title: "Lost in Translation",
+        year: 2003,
+        runtime: "102 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/6ITVHoipvxAS8luzKtHTbPaHLtT.jpg`,
+        description: "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's co...",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/153"
       }
     ]
   },
   {
     id: "classics",
-    name: "Masters of Brevity",
+    name: "Enduring Visions",
     icon: "🎬",
     movies: [
       {
@@ -420,46 +408,34 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/three-colors-blue"
       },
       {
-        id: "three-colors-white",
-        title: "Three Colors: White",
-        year: 1994,
-        runtime: "92 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/fdIet3NSa27gobMbaUml66oCQNT.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/yOpNvGSsT0YECuhhrlGBLIshh0u.jpg`,
-        description: "Polish immigrant Karol Karol finds himself out of a marriage, a job and a country when his French wife, Dominique, divorces him after six months due to his impotence. Forced to leave France after losi...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/three-colors-white"
+        id: "reservoir-dogs",
+        title: "Reservoir Dogs",
+        year: 1992,
+        runtime: "99 min",
+        rating: 8.1,
+        poster: `${TMDB_IMG}/w500/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/jwt159hXWA9Q5xpBo8hWb3zwLi7.jpg`,
+        description: "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic ...",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/reservoir-dogs"
       },
       {
-        id: "three-colors-red",
-        title: "Three Colors: Red",
-        year: 1994,
-        runtime: "100 min",
-        rating: 7.9,
-        poster: `${TMDB_IMG}/w500/JHmsBiX1tjCKqAul1lzC20WcAW.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/pZcoSJUb3Lgr9Rzg2shg1PtTBP9.jpg`,
-        description: "Part-time model Valentine unexpectedly befriends a retired judge after she runs over his dog. At first, the grumpy man shows no concern about the dog, and Valentine decides to keep it. But the two for...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/three-colors-red"
-      },
-      {
-        id: "the-celebration",
-        title: "The Celebration",
-        year: 1998,
-        runtime: "105 min",
-        rating: 7.7,
-        poster: `${TMDB_IMG}/w500/2LRzNq41yrY8EjCnD1S8sCCPvKk.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/7rkgM8yZ49LwYTcka5ETGRJAQ9M.jpg`,
-        description: "The family of a wealthy businessman gather to celebrate his 60th birthday. During the course of the party, his eldest son presents a speech that reveals a devastating secret that turns the night into ...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/the-celebration"
+        id: "night-of-the-living-dead",
+        title: "Night of the Living Dead",
+        year: 1968,
+        runtime: "96 min",
+        rating: 7.6,
+        poster: `${TMDB_IMG}/w500/rb2NWyb008u1EcKCOyXs2Nmj0ra.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/5KtmBSqFtHY3I9t8lgH27Mc0bqY.jpg`,
+        description: "A ragtag group barricade themselves in an old Pennsylvania farmhouse to remain safe from a horde of flesh-eating ghouls ravaging the Northeast.",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/night-of-the-living-dead"
       }
     ]
   },
   {
     id: "nordic",
-    name: "Baltic Shores",
+    name: "Frozen Tales",
     icon: "❄️",
     movies: [
       {
@@ -491,7 +467,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Delicate Frames",
+    name: "The Poetry of Brevity",
     icon: "✨",
     movies: [
       {
@@ -506,25 +482,6 @@ export const categories: Category[] = [
         service: "Netflix",
         link: "https://www.netflix.com/se/title/80205227",
         featured: true
-      }
-    ]
-  },
-  {
-    id: "quiet",
-    name: "Quiet Revelations",
-    icon: "🌙",
-    movies: [
-      {
-        id: "sans-soleil",
-        title: "Sans Soleil",
-        year: 1983,
-        runtime: "100 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/sspJu9K03FZQP8A1cheurkiePD0.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/lns7roobSPQQTF54oSPzkT3qH1q.jpg`,
-        description: "A woman narrates the thoughts of a world traveler, meditations on time and memory expressed in words and images from places as far-flung as Japan, Guinea-Bissau, Iceland, and San Francisco.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/sans-soleil"
       }
     ]
   }
