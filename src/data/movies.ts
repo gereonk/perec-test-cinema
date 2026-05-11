@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Lives Examined",
+    name: "Portraits in Motion",
     icon: "🎨",
     movies: [
       {
@@ -164,22 +164,46 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/beasts-of-the-southern-wild"
       },
       {
-        id: "swapped",
-        title: "Swapped",
+        id: "apex",
+        title: "Apex",
         year: 2026,
-        runtime: "102 min",
-        rating: 7.8,
-        poster: `${TMDB_IMG}/w500/tHhxWxge06goXU6ZQH1hj7vK8Hd.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/wpabGmGA3IaJNGudbzGritmR8Km.jpg`,
-        description: "A small woodland creature and a majestic bird, two natural sworn enemies of the Valley, magically trade places and set off on an adventure of a lifetime to switch back. Their journey soon uncovers a g...",
+        runtime: "96 min",
+        rating: 6.5,
+        poster: `${TMDB_IMG}/w500/eTp7gSPkSF3Aw79mNx1NkBP1PZT.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/9nzfyiYbmTUXWC4B2kwjl4NAlqO.jpg`,
+        description: "A grieving woman pushing her limits on a solo adventure in the Australian wild is ensnared in a twisted game with a cunning killer who thinks she's prey.",
         service: "Netflix",
-        link: "https://www.netflix.com/se/title/1007757"
+        link: "https://www.netflix.com/se/title/1318447"
+      },
+      {
+        id: "hot-girls-wanted",
+        title: "Hot Girls Wanted",
+        year: 2015,
+        runtime: "84 min",
+        rating: 6.1,
+        poster: `${TMDB_IMG}/w500/75ot83QOkc02vujyzmIbumQCU6Y.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/bV7eAcBrYb57PwjpQ2ODT6VyFPd.jpg`,
+        description: "A first-ever look at the realities of the professional “amateur” porn world and the steady stream of 18-to-19-year old girls entering into it.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/318256"
+      },
+      {
+        id: "vengeance",
+        title: "Vengeance",
+        year: 2026,
+        runtime: "103 min",
+        rating: 7.1,
+        poster: `${TMDB_IMG}/w500/ygWXPL0RS91JyJPNOfK34eV3bRE.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/jJmlCFi5EjpH5vHmOczRiVDm0qS.jpg`,
+        description: "The brutal murder of the wife of “Toro,” a military hero in the special forces, turns him into a man with a single purpose: revenge. After a stroke of fate makes him a millionaire, Carlos transforms h...",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/vengeance"
       }
     ]
   },
   {
     id: "coming-of-age",
-    name: "Youth in Focus",
+    name: "Becoming",
     icon: "🌱",
     movies: [
       {
@@ -292,18 +316,6 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/the-400-blows"
       },
       {
-        id: "grave-of-the-fireflies",
-        title: "Grave of the Fireflies",
-        year: 1988,
-        runtime: "89 min",
-        rating: 8.4,
-        poster: `${TMDB_IMG}/w500/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/aHaqZpOL7UyVu0nKqp3SMz0o2E1.jpg`,
-        description: "In the final months of World War II, 14-year-old Seita and his sister Setsuko are orphaned when their mother is killed during an air raid in Kobe, Japan. After a falling out with their aunt, they move...",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/12477"
-      },
-      {
         id: "the-double-life-of-v-ronique",
         title: "The Double Life of Véronique",
         year: 1991,
@@ -314,24 +326,12 @@ export const categories: Category[] = [
         description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
-      },
-      {
-        id: "lost-in-translation",
-        title: "Lost in Translation",
-        year: 2003,
-        runtime: "102 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/6ITVHoipvxAS8luzKtHTbPaHLtT.jpg`,
-        description: "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's co...",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/153"
       }
     ]
   },
   {
     id: "classics",
-    name: "Enduring Visions",
+    name: "Golden Age Gems",
     icon: "🎬",
     movies: [
       {
@@ -418,36 +418,12 @@ export const categories: Category[] = [
         description: "The family of a wealthy businessman gather to celebrate his 60th birthday. During the course of the party, his eldest son presents a speech that reveals a devastating secret that turns the night into ...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/the-celebration"
-      },
-      {
-        id: "reservoir-dogs",
-        title: "Reservoir Dogs",
-        year: 1992,
-        runtime: "99 min",
-        rating: 8.1,
-        poster: `${TMDB_IMG}/w500/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/jwt159hXWA9Q5xpBo8hWb3zwLi7.jpg`,
-        description: "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic ...",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/reservoir-dogs"
-      },
-      {
-        id: "night-of-the-living-dead",
-        title: "Night of the Living Dead",
-        year: 1968,
-        runtime: "96 min",
-        rating: 7.6,
-        poster: `${TMDB_IMG}/w500/rb2NWyb008u1EcKCOyXs2Nmj0ra.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/5KtmBSqFtHY3I9t8lgH27Mc0bqY.jpg`,
-        description: "A ragtag group barricade themselves in an old Pennsylvania farmhouse to remain safe from a horde of flesh-eating ghouls ravaging the Northeast.",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/night-of-the-living-dead"
       }
     ]
   },
   {
     id: "nordic",
-    name: "Frozen Tales",
+    name: "Midnight Sun Cinema",
     icon: "❄️",
     movies: [
       {
@@ -479,7 +455,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "The Poetry of Brevity",
+    name: "Moments Crystallized",
     icon: "✨",
     movies: [
       {
@@ -499,7 +475,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Whispered Truths",
+    name: "Still Waters",
     icon: "🌙",
     movies: [
       {
