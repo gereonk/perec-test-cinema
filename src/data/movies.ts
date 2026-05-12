@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Portraits in Motion",
+    name: "Intimate Portraits",
     icon: "🎨",
     movies: [
       {
@@ -164,46 +164,22 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/beasts-of-the-southern-wild"
       },
       {
-        id: "apex",
-        title: "Apex",
+        id: "swapped",
+        title: "Swapped",
         year: 2026,
-        runtime: "96 min",
-        rating: 6.5,
-        poster: `${TMDB_IMG}/w500/eTp7gSPkSF3Aw79mNx1NkBP1PZT.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/9nzfyiYbmTUXWC4B2kwjl4NAlqO.jpg`,
-        description: "A grieving woman pushing her limits on a solo adventure in the Australian wild is ensnared in a twisted game with a cunning killer who thinks she's prey.",
+        runtime: "102 min",
+        rating: 8.9,
+        poster: `${TMDB_IMG}/w500/tHhxWxge06goXU6ZQH1hj7vK8Hd.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/zMwhWailP1WY7sb6AoE6b8ugoy.jpg`,
+        description: "A small woodland creature and a majestic bird, two natural sworn enemies of the Valley, magically trade places and set off on an adventure of a lifetime to switch back. Their journey soon uncovers a g...",
         service: "Netflix",
-        link: "https://www.netflix.com/se/title/1318447"
-      },
-      {
-        id: "hot-girls-wanted",
-        title: "Hot Girls Wanted",
-        year: 2015,
-        runtime: "84 min",
-        rating: 6.1,
-        poster: `${TMDB_IMG}/w500/75ot83QOkc02vujyzmIbumQCU6Y.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/bV7eAcBrYb57PwjpQ2ODT6VyFPd.jpg`,
-        description: "A first-ever look at the realities of the professional “amateur” porn world and the steady stream of 18-to-19-year old girls entering into it.",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/318256"
-      },
-      {
-        id: "vengeance",
-        title: "Vengeance",
-        year: 2026,
-        runtime: "103 min",
-        rating: 7.1,
-        poster: `${TMDB_IMG}/w500/ygWXPL0RS91JyJPNOfK34eV3bRE.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/jJmlCFi5EjpH5vHmOczRiVDm0qS.jpg`,
-        description: "The brutal murder of the wife of “Toro,” a military hero in the special forces, turns him into a man with a single purpose: revenge. After a stroke of fate makes him a millionaire, Carlos transforms h...",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/vengeance"
+        link: "https://www.netflix.com/se/title/1007757"
       }
     ]
   },
   {
     id: "coming-of-age",
-    name: "Becoming",
+    name: "Adolescent Dreams",
     icon: "🌱",
     movies: [
       {
@@ -316,22 +292,22 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/the-400-blows"
       },
       {
-        id: "the-double-life-of-v-ronique",
-        title: "The Double Life of Véronique",
-        year: 1991,
-        runtime: "98 min",
-        rating: 7.5,
-        poster: `${TMDB_IMG}/w500/oqRyO9xrNBRaxqF9pCHHgLuaATx.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/vjsFyeCf5W5rxCFpS9MIAEZJkIG.jpg`,
-        description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
+        id: "grave-of-the-fireflies",
+        title: "Grave of the Fireflies",
+        year: 1988,
+        runtime: "89 min",
+        rating: 8.4,
+        poster: `${TMDB_IMG}/w500/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/aHaqZpOL7UyVu0nKqp3SMz0o2E1.jpg`,
+        description: "In the final months of World War II, 14-year-old Seita and his sister Setsuko are orphaned when their mother is killed during an air raid in Kobe, Japan. After a falling out with their aunt, they move...",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/12477"
       }
     ]
   },
   {
     id: "classics",
-    name: "Golden Age Gems",
+    name: "Vintage Treasures",
     icon: "🎬",
     movies: [
       {
@@ -418,12 +394,36 @@ export const categories: Category[] = [
         description: "The family of a wealthy businessman gather to celebrate his 60th birthday. During the course of the party, his eldest son presents a speech that reveals a devastating secret that turns the night into ...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/the-celebration"
+      },
+      {
+        id: "reservoir-dogs",
+        title: "Reservoir Dogs",
+        year: 1992,
+        runtime: "99 min",
+        rating: 8.1,
+        poster: `${TMDB_IMG}/w500/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/jwt159hXWA9Q5xpBo8hWb3zwLi7.jpg`,
+        description: "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic ...",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/reservoir-dogs"
+      },
+      {
+        id: "night-of-the-living-dead",
+        title: "Night of the Living Dead",
+        year: 1968,
+        runtime: "96 min",
+        rating: 7.6,
+        poster: `${TMDB_IMG}/w500/rb2NWyb008u1EcKCOyXs2Nmj0ra.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/5KtmBSqFtHY3I9t8lgH27Mc0bqY.jpg`,
+        description: "A ragtag group barricade themselves in an old Pennsylvania farmhouse to remain safe from a horde of flesh-eating ghouls ravaging the Northeast.",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/night-of-the-living-dead"
       }
     ]
   },
   {
     id: "nordic",
-    name: "Midnight Sun Cinema",
+    name: "Nordic Noir",
     icon: "❄️",
     movies: [
       {
@@ -455,7 +455,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Moments Crystallized",
+    name: "Time Suspended",
     icon: "✨",
     movies: [
       {
@@ -475,7 +475,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Still Waters",
+    name: "The Sound of Silence",
     icon: "🌙",
     movies: [
       {
@@ -489,6 +489,25 @@ export const categories: Category[] = [
         description: "A woman narrates the thoughts of a world traveler, meditations on time and memory expressed in words and images from places as far-flung as Japan, Guinea-Bissau, Iceland, and San Francisco.",
         service: "MUBI",
         link: "https://mubi.com/sv/films/sans-soleil"
+      }
+    ]
+  },
+  {
+    id: "love",
+    name: "Amorous Tales",
+    icon: "💕",
+    movies: [
+      {
+        id: "no-place-to-be-single",
+        title: "No Place to Be Single",
+        year: 2026,
+        runtime: "103 min",
+        rating: 6.8,
+        poster: `${TMDB_IMG}/w500/httlhu80GnOx3bCAXi4sYdbDny0.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/bWvGtxd3a6wW7ocQPlYza3ycpxk.jpg`,
+        description: "A brilliant and intelligent love comedy that celebrates second chances and new horizons, starring a strong and determined woman who settles the score.",
+        service: "Prime Video",
+        link: "https://www.primevideo.com/-/sv/detail/no-place-to-be-single"
       }
     ]
   }
