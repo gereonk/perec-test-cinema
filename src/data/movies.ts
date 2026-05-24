@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Inner Worlds",
+    name: "Character Studies",
     icon: "🎨",
     movies: [
       {
@@ -78,18 +78,6 @@ export const categories: Category[] = [
         featured: true
       },
       {
-        id: "coffee-and-cigarettes",
-        title: "Coffee and Cigarettes",
-        year: 2003,
-        runtime: "95 min",
-        rating: 7,
-        poster: `${TMDB_IMG}/w500/pfG02QCsutx3PIxFS8UY4iM9AsS.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/pfG02QCsutx3PIxFS8UY4iM9AsS.jpg`,
-        description: "A collection of eleven films from Jim Jarmusch, each featuring coffee and cigarettes as recurring motifs in conversations between strangers and friends.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/coffee-and-cigarettes"
-      },
-      {
         id: "weekend",
         title: "Weekend",
         year: 2011,
@@ -100,31 +88,6 @@ export const categories: Category[] = [
         description: "After a drunken house party, Russell heads out to a gay club and picks up Glen. The next morning, Glen starts recording his one-night stands on tape.",
         service: "MUBI",
         link: "https://mubi.com/sv/films/weekend"
-      },
-      {
-        id: "fallen-leaves",
-        title: "Fallen Leaves",
-        year: 2023,
-        runtime: "82 min",
-        rating: 7.3,
-        poster: `${TMDB_IMG}/w500/9ayYOpeqHhxfHHUoyt3kXzznECO.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/9ayYOpeqHhxfHHUoyt3kXzznECO.jpg`,
-        description: "Two lonely souls find each other in Helsinki",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/fallen-leaves-2023",
-        featured: true
-      },
-      {
-        id: "passages",
-        title: "Passages",
-        year: 2023,
-        runtime: "91 min",
-        rating: 6.6,
-        poster: `${TMDB_IMG}/w500/8GR7s4YiyFswOmTibfKCYAPxT9k.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/8GR7s4YiyFswOmTibfKCYAPxT9k.jpg`,
-        description: "A gay filmmaker",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/passages-2022"
       },
       {
         id: "fantastic-mr-fox",
@@ -152,60 +115,36 @@ export const categories: Category[] = [
         featured: true
       },
       {
-        id: "beasts-of-the-southern-wild",
-        title: "Beasts of the Southern Wild",
-        year: 2012,
-        runtime: "93 min",
-        rating: 6.8,
-        poster: `${TMDB_IMG}/w500/nQJmWekGYlXhezGUb21xFfEfwhH.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/7LWLPvyfLSb2oOlgWwAwUqA8uKo.jpg`,
-        description: "Hushpuppy, an intrepid six-year-old girl, lives with her father, Wink, in ",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/beasts-of-the-southern-wild"
-      },
-      {
-        id: "the-punisher-one-last-kill",
-        title: "The Punisher: One Last Kill",
+        id: "apex",
+        title: "Apex",
         year: 2026,
-        runtime: "51 min",
-        rating: 8.5,
-        poster: `${TMDB_IMG}/w500/qQclTgLMDvGBuUBFGHRipxkEwWR.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/qO55CD8tgVL1T4WKn6zYFFiD6lL.jpg`,
-        description: "As Frank Castle searches for meaning beyond revenge, an unexpected force pulls him back into the fight.",
-        service: "Disney+",
-        link: "https://www.disneyplus.com/sv-se/movies/the-punisher-one-last-kill"
-      },
-      {
-        id: "swapped",
-        title: "Swapped",
-        year: 2026,
-        runtime: "102 min",
-        rating: 9,
-        poster: `${TMDB_IMG}/w500/tHhxWxge06goXU6ZQH1hj7vK8Hd.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/zMwhWailP1WY7sb6AoE6b8ugoy.jpg`,
-        description: "A small woodland creature and a majestic bird, two natural sworn enemies of the Valley, magically trade places and set off on an adventure of a lifetime to switch back. Their journey soon uncovers a g...",
+        runtime: "96 min",
+        rating: 6.7,
+        poster: `${TMDB_IMG}/w500/eTp7gSPkSF3Aw79mNx1NkBP1PZT.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/oTE4lNs4PSG5iIWjqaTdCIFJ4Bs.jpg`,
+        description: "A grieving woman pushing her limits on a solo adventure in the Australian wild is ensnared in a twisted game with a cunning killer who thinks she's prey.",
         service: "Netflix",
-        link: "https://www.netflix.com/se/title/1007757"
+        link: "https://www.netflix.com/se/title/1318447"
+      },
+      {
+        id: "wall-e",
+        title: "WALL·E",
+        year: 2008,
+        runtime: "98 min",
+        rating: 8.1,
+        poster: `${TMDB_IMG}/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/nYs4ZwnJBK4AgljhvzwNz7fpr3E.jpg`,
+        description: "After hundreds of years doing what he was built for, WALL•E— a robot designed to clean up the earth—discovers a new purpose in life when he meets a sleek search robot named EVE. EVE comes to realize t...",
+        service: "Disney+",
+        link: "https://www.disneyplus.com/sv-se/movies/wall-e"
       }
     ]
   },
   {
     id: "coming-of-age",
-    name: "Young Hearts",
+    name: "Coming of Age, Contained",
     icon: "🌱",
     movies: [
-      {
-        id: "columbus",
-        title: "Columbus",
-        year: 2017,
-        runtime: "104 min",
-        rating: 7.2,
-        poster: `${TMDB_IMG}/w500/6tk0xmn9k5HjUeXsnhxIa94sFXP.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/6tk0xmn9k5HjUeXsnhxIa94sFXP.jpg`,
-        description: "A Korean-born man finds himself stuck in Columbus, Indiana, where his architect father is in a coma. The man meets a young woman who wants to stay in the city because of her mother and her love of architecture.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/columbus"
-      },
       {
         id: "the-witch",
         title: "The Witch",
@@ -220,18 +159,6 @@ export const categories: Category[] = [
         featured: true
       },
       {
-        id: "all-of-us-strangers",
-        title: "All of Us Strangers",
-        year: 2023,
-        runtime: "105 min",
-        rating: 7.6,
-        poster: `${TMDB_IMG}/w500/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg`,
-        description: "A screenwriter revisits his childhood home and finds his long-dead parents waiting. Andrew Haigh",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/strangers-2022-andrew-haigh"
-      },
-      {
         id: "the-breakfast-club",
         title: "The Breakfast Club",
         year: 1985,
@@ -244,120 +171,36 @@ export const categories: Category[] = [
         link: "https://www.netflix.com/se/title/60029171"
       },
       {
-        id: "frances-ha",
-        title: "Frances Ha",
-        year: 2012,
-        runtime: "86 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/jrq1NoKvsxWCcffVOjegiYwloFN.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/jrq1NoKvsxWCcffVOjegiYwloFN.jpg`,
-        description: "A young dancer navigates friendship, ambition, and the gap between who she is and who she wants to be in New York. Noah Baumbach and Greta Gerwig",
+        id: "the-double-life-of-v-ronique",
+        title: "The Double Life of Véronique",
+        year: 1991,
+        runtime: "98 min",
+        rating: 7.5,
+        poster: `${TMDB_IMG}/w500/oqRyO9xrNBRaxqF9pCHHgLuaATx.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/vjsFyeCf5W5rxCFpS9MIAEZJkIG.jpg`,
+        description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
         service: "MUBI",
-        link: "https://mubi.com/sv/films/frances-ha"
+        link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
       },
       {
-        id: "close",
-        title: "Close",
-        year: 2022,
-        runtime: "104 min",
-        rating: 7.8,
-        poster: `${TMDB_IMG}/w500/dlMNnWs7Mz8Nk5AC447Ew1tD5pn.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/dlMNnWs7Mz8Nk5AC447Ew1tD5pn.jpg`,
-        description: "Two 13-year-old boys share an intense friendship until their classmates",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/close-2022"
-      },
-      {
-        id: "eraserhead",
-        title: "Eraserhead",
-        year: 1977,
-        runtime: "89 min",
-        rating: 7.3,
-        poster: `${TMDB_IMG}/w500/mxveW3mGVc0DzLdOmtkZsgd7c3B.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/ApB0mF2d5Oqioi3yxjuogiotSLI.jpg`,
-        description: "First-time father Henry Spencer tries to survive his industrial environment, his angry girlfriend, and the unbearable screams of his newly born mutant child.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/eraserhead"
-      },
-      {
-        id: "shame",
-        title: "Shame",
-        year: 2011,
+        id: "lost-in-translation",
+        title: "Lost in Translation",
+        year: 2003,
         runtime: "102 min",
-        rating: 6.9,
-        poster: `${TMDB_IMG}/w500/cAWLz9kFv4xc6IsEXTj2DrcqD55.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/AOSzhQfsXIqHPl9JgQvGkBPhYm.jpg`,
-        description: "Brandon, a thirty-something man living in New York, eludes intimacy with women but feeds his deepest desires with a compulsive addiction to sex. When his younger sister temporarily moves into his apar...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/shame"
-      },
-      {
-        id: "the-400-blows",
-        title: "The 400 Blows",
-        year: 1959,
-        runtime: "99 min",
-        rating: 8,
-        poster: `${TMDB_IMG}/w500/12PuU23kkDLvTd0nb8hMlE3oShB.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/cy7ymUaMEWRoig7LWXpfzaaw2vv.jpg`,
-        description: "For young Parisian boy Antoine Doinel, life is one difficult situation after another. Surrounded by inconsiderate adults, including his neglectful parents, Antoine spends his days with his best friend...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/the-400-blows"
-      },
-      {
-        id: "grave-of-the-fireflies",
-        title: "Grave of the Fireflies",
-        year: 1988,
-        runtime: "89 min",
-        rating: 8.4,
-        poster: `${TMDB_IMG}/w500/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/aHaqZpOL7UyVu0nKqp3SMz0o2E1.jpg`,
-        description: "In the final months of World War II, 14-year-old Seita and his sister Setsuko are orphaned when their mother is killed during an air raid in Kobe, Japan. After a falling out with their aunt, they move...",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/6ITVHoipvxAS8luzKtHTbPaHLtT.jpg`,
+        description: "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's co...",
         service: "Netflix",
-        link: "https://www.netflix.com/se/title/12477"
+        link: "https://www.netflix.com/se/title/153"
       }
     ]
   },
   {
     id: "classics",
-    name: "Ageless Stories",
+    name: "Eternal Cinema",
     icon: "🎬",
     movies: [
-      {
-        id: "cleo-from-5-to-7",
-        title: "Cléo from 5 to 7",
-        year: 1962,
-        runtime: "90 min",
-        rating: 7.9,
-        poster: `${TMDB_IMG}/w500/oelBStY4xpguaplRv15P3Za7Xsr.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/oelBStY4xpguaplRv15P3Za7Xsr.jpg`,
-        description: "A singer awaiting the results of a medical test wanders around Paris from 5 to 7 p.m. in this real-time portrait of a woman in crisis.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/cleo-from-5-to-7"
-      },
-      {
-        id: "persona",
-        title: "Persona",
-        year: 1966,
-        runtime: "83 min",
-        rating: 8.1,
-        poster: `${TMDB_IMG}/w500/v2KsLNChpT6vLf0YFhkJmAtGkNq.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/v2KsLNChpT6vLf0YFhkJmAtGkNq.jpg`,
-        description: "A nurse is put in charge of a mute actress and finds that their personae are melding together in Ingmar Bergman",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/persona"
-      },
-      {
-        id: "beau-travail",
-        title: "Beau Travail",
-        year: 1999,
-        runtime: "92 min",
-        rating: 7.3,
-        poster: `${TMDB_IMG}/w500/5ySa1aQaT7kMcAbKwlS1HXxp2hM.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/5ySa1aQaT7kMcAbKwlS1HXxp2hM.jpg`,
-        description: "In the barren desert of Djibouti, a French Foreign Legion sergeant",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/beau-travail"
-      },
       {
         id: "my-neighbor-totoro",
         title: "My Neighbor Totoro",
@@ -372,58 +215,22 @@ export const categories: Category[] = [
         featured: true
       },
       {
-        id: "perfect-blue",
-        title: "Perfect Blue",
-        year: 1998,
-        runtime: "82 min",
-        rating: 8.3,
-        poster: `${TMDB_IMG}/w500/925SaqJIfRCeIt11BzvqPVVg263.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/mHG7dpLb0ZScSY3LpP443IHRmjy.jpg`,
-        description: "Rising pop star Mima quits singing to pursue a career as an actress. After she takes up a role on a popular detective show, her handlers and collaborators begin turning up murdered. Harboring feelings...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/perfect-blue"
-      },
-      {
-        id: "three-colors-blue",
-        title: "Three Colors: Blue",
-        year: 1993,
-        runtime: "98 min",
+        id: "night-of-the-living-dead",
+        title: "Night of the Living Dead",
+        year: 1968,
+        runtime: "96 min",
         rating: 7.6,
-        poster: `${TMDB_IMG}/w500/33wsWxzsNstI8N7dvuwzFmj1qBd.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/nAyUVvcdOKHmukdgGHZ7xR5er1q.jpg`,
-        description: "The wife of a famous composer survives a car accident that kills her husband and daughter. Now alone, she shakes off her old identity and explores her newfound freedom but finds that she is unbreakabl...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/three-colors-blue"
-      },
-      {
-        id: "the-celebration",
-        title: "The Celebration",
-        year: 1998,
-        runtime: "101 min",
-        rating: 7.7,
-        poster: `${TMDB_IMG}/w500/2LRzNq41yrY8EjCnD1S8sCCPvKk.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/yCtgdv7TfgZLHj6R9IQKD5TjljP.jpg`,
-        description: "The family of a wealthy businessman gather to celebrate his 60th birthday. During the course of the party, his eldest son presents a speech that reveals a devastating secret that turns the night into ...",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/the-celebration"
-      },
-      {
-        id: "reservoir-dogs",
-        title: "Reservoir Dogs",
-        year: 1992,
-        runtime: "99 min",
-        rating: 8.1,
-        poster: `${TMDB_IMG}/w500/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/jwt159hXWA9Q5xpBo8hWb3zwLi7.jpg`,
-        description: "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic ...",
+        poster: `${TMDB_IMG}/w500/rb2NWyb008u1EcKCOyXs2Nmj0ra.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/5KtmBSqFtHY3I9t8lgH27Mc0bqY.jpg`,
+        description: "A ragtag group barricade themselves in an old Pennsylvania farmhouse to remain safe from a horde of flesh-eating ghouls ravaging the Northeast.",
         service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/reservoir-dogs"
+        link: "https://www.primevideo.com/-/sv/detail/night-of-the-living-dead"
       }
     ]
   },
   {
     id: "nordic",
-    name: "Nordic Perspectives",
+    name: "Northern Lights",
     icon: "❄️",
     movies: [
       {
@@ -455,7 +262,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Visual Poetry",
+    name: "Ephemeral Art",
     icon: "✨",
     movies: [
       {
@@ -470,25 +277,6 @@ export const categories: Category[] = [
         service: "Netflix",
         link: "https://www.netflix.com/se/title/80205227",
         featured: true
-      }
-    ]
-  },
-  {
-    id: "quiet",
-    name: "Meditative Moments",
-    icon: "🌙",
-    movies: [
-      {
-        id: "sans-soleil",
-        title: "Sans Soleil",
-        year: 1983,
-        runtime: "100 min",
-        rating: 7.5,
-        poster: `${TMDB_IMG}/w500/sspJu9K03FZQP8A1cheurkiePD0.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/lns7roobSPQQTF54oSPzkT3qH1q.jpg`,
-        description: "A woman narrates the thoughts of a world traveler, meditations on time and memory expressed in words and images from places as far-flung as Japan, Guinea-Bissau, Iceland, and San Francisco.",
-        service: "MUBI",
-        link: "https://mubi.com/sv/films/sans-soleil"
       }
     ]
   }
