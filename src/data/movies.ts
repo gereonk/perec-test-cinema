@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Souls Unveiled",
+    name: "Inner Worlds",
     icon: "🎨",
     movies: [
       {
@@ -115,28 +115,28 @@ export const categories: Category[] = [
         featured: true
       },
       {
-        id: "the-punisher-one-last-kill",
-        title: "The Punisher: One Last Kill",
+        id: "apex",
+        title: "Apex",
         year: 2026,
-        runtime: "51 min",
-        rating: 8.4,
-        poster: `${TMDB_IMG}/w500/qQclTgLMDvGBuUBFGHRipxkEwWR.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/qO55CD8tgVL1T4WKn6zYFFiD6lL.jpg`,
-        description: "As Frank Castle searches for meaning beyond revenge, an unexpected force pulls him back into the fight.",
-        service: "Disney+",
-        link: "https://www.disneyplus.com/sv-se/movies/the-punisher-one-last-kill"
+        runtime: "96 min",
+        rating: 6.7,
+        poster: `${TMDB_IMG}/w500/eTp7gSPkSF3Aw79mNx1NkBP1PZT.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/oTE4lNs4PSG5iIWjqaTdCIFJ4Bs.jpg`,
+        description: "A grieving woman pushing her limits on a solo adventure in the Australian wild is ensnared in a twisted game with a cunning killer who thinks she's prey.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/1318447"
       },
       {
-        id: "swapped",
-        title: "Swapped",
-        year: 2026,
-        runtime: "102 min",
-        rating: 9,
-        poster: `${TMDB_IMG}/w500/tHhxWxge06goXU6ZQH1hj7vK8Hd.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/zMwhWailP1WY7sb6AoE6b8ugoy.jpg`,
-        description: "A small woodland creature and a majestic bird, two natural sworn enemies of the Valley, magically trade places and set off on an adventure of a lifetime to switch back. Their journey soon uncovers a g...",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/1007757"
+        id: "wall-e",
+        title: "WALL·E",
+        year: 2008,
+        runtime: "98 min",
+        rating: 8.1,
+        poster: `${TMDB_IMG}/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/nYs4ZwnJBK4AgljhvzwNz7fpr3E.jpg`,
+        description: "After hundreds of years doing what he was built for, WALL•E— a robot designed to clean up the earth—discovers a new purpose in life when he meets a sleek search robot named EVE. EVE comes to realize t...",
+        service: "Disney+",
+        link: "https://www.disneyplus.com/sv-se/movies/wall-e"
       },
       {
         id: "flamin-hot",
@@ -149,24 +149,12 @@ export const categories: Category[] = [
         description: "The inspiring true story of Richard Montañez, the Frito Lay janitor who channeled his Mexican American heritage and upbringing to turn the iconic Flamin' Hot Cheetos into a snack that disrupted the fo...",
         service: "Prime Video",
         link: "https://www.primevideo.com/-/sv/detail/flamin-hot"
-      },
-      {
-        id: "all-of-us-strangers",
-        title: "All of Us Strangers",
-        year: 2023,
-        runtime: "105 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/8yjHiSuSEhzR916LcIecuQ8tETG.jpg`,
-        description: "One night in his near-empty tower block in contemporary London, Adam has a chance encounter with a mysterious neighbor Harry, which punctures the rhythm of his everyday life.",
-        service: "Disney+",
-        link: "https://www.disneyplus.com/sv-se/movies/all-of-us-strangers"
       }
     ]
   },
   {
     id: "coming-of-age",
-    name: "First Steps",
+    name: "Young Hearts",
     icon: "🌱",
     movies: [
       {
@@ -219,18 +207,6 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/eraserhead"
       },
       {
-        id: "grave-of-the-fireflies",
-        title: "Grave of the Fireflies",
-        year: 1988,
-        runtime: "89 min",
-        rating: 8.4,
-        poster: `${TMDB_IMG}/w500/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/aHaqZpOL7UyVu0nKqp3SMz0o2E1.jpg`,
-        description: "In the final months of World War II, 14-year-old Seita and his sister Setsuko are orphaned when their mother is killed during an air raid in Kobe, Japan. After a falling out with their aunt, they move...",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/12477"
-      },
-      {
         id: "the-double-life-of-v-ronique",
         title: "The Double Life of Véronique",
         year: 1991,
@@ -241,12 +217,24 @@ export const categories: Category[] = [
         description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
+      },
+      {
+        id: "lost-in-translation",
+        title: "Lost in Translation",
+        year: 2003,
+        runtime: "102 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/6ITVHoipvxAS8luzKtHTbPaHLtT.jpg`,
+        description: "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's co...",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/153"
       }
     ]
   },
   {
     id: "classics",
-    name: "Cinema Heritage",
+    name: "Ageless Stories",
     icon: "🎬",
     movies: [
       {
@@ -275,22 +263,22 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/the-celebration"
       },
       {
-        id: "reservoir-dogs",
-        title: "Reservoir Dogs",
-        year: 1992,
-        runtime: "99 min",
-        rating: 8.1,
-        poster: `${TMDB_IMG}/w500/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/jwt159hXWA9Q5xpBo8hWb3zwLi7.jpg`,
-        description: "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic ...",
+        id: "night-of-the-living-dead",
+        title: "Night of the Living Dead",
+        year: 1968,
+        runtime: "96 min",
+        rating: 7.6,
+        poster: `${TMDB_IMG}/w500/rb2NWyb008u1EcKCOyXs2Nmj0ra.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/5KtmBSqFtHY3I9t8lgH27Mc0bqY.jpg`,
+        description: "A ragtag group barricade themselves in an old Pennsylvania farmhouse to remain safe from a horde of flesh-eating ghouls ravaging the Northeast.",
         service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/reservoir-dogs"
+        link: "https://www.primevideo.com/-/sv/detail/night-of-the-living-dead"
       }
     ]
   },
   {
     id: "nordic",
-    name: "Tales from the North",
+    name: "Nordic Perspectives",
     icon: "❄️",
     movies: [
       {
@@ -322,7 +310,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Fleeting Beauty",
+    name: "Visual Poetry",
     icon: "✨",
     movies: [
       {
@@ -342,7 +330,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Contemplative Cinema",
+    name: "Meditative Moments",
     icon: "🌙",
     movies: [
       {
