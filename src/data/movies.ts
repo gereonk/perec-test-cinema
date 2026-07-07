@@ -25,7 +25,7 @@ const TMDB_IMG = "https://image.tmdb.org/t/p";
 export const categories: Category[] = [
   {
     id: "intimate-portraits",
-    name: "Inner Worlds",
+    name: "Personal Landscapes",
     icon: "🎨",
     movies: [
       {
@@ -115,70 +115,34 @@ export const categories: Category[] = [
         featured: true
       },
       {
-        id: "little-brother",
-        title: "Little Brother",
-        year: 2026,
-        runtime: "101 min",
-        rating: 6.4,
-        poster: `${TMDB_IMG}/w500/hIJpXb7Xaje2mebN9ylsS7blQzP.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/bdwv8Hsu4Bnz8aRbH5MQ9clQ0DG.jpg`,
-        description: "A tightly wound realtor's picture-perfect life gets an extreme makeover when his lovably chaotic \"little brother\" suddenly reappears.",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/1397385"
-      },
-      {
-        id: "swapped",
-        title: "Swapped",
-        year: 2026,
-        runtime: "102 min",
-        rating: 8.9,
-        poster: `${TMDB_IMG}/w500/tHhxWxge06goXU6ZQH1hj7vK8Hd.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/zMwhWailP1WY7sb6AoE6b8ugoy.jpg`,
-        description: "A small woodland creature and a majestic bird, two natural sworn enemies of the Valley, magically trade places and set off on an adventure of a lifetime to switch back. Their journey soon uncovers a g...",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/1007757"
-      },
-      {
-        id: "the-punisher-one-last-kill",
-        title: "The Punisher: One Last Kill",
-        year: 2026,
+        id: "miraculous-world-tokyo-stellar-force",
+        title: "Miraculous World: Tokyo, Stellar Force",
+        year: 2025,
         runtime: "51 min",
+        rating: 8.5,
+        poster: `${TMDB_IMG}/w500/vFaopnGXRXxRf4z2Z3IgA1QtOyV.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/3kps0wiGFMRVkSXxbebbAUeWrN3.jpg`,
+        description: "Kagami drags Marinette to Tokyo to help the Stellars defeat a new supervillain, but Marinette soon realizes her friend has another, untold reason for this trip to Japan.",
+        service: "Disney+",
+        link: "https://www.disneyplus.com/sv-se/movies/miraculous-world-tokyo-stellar-force"
+      },
+      {
+        id: "the-wild-robot",
+        title: "The Wild Robot",
+        year: 2024,
+        runtime: "102 min",
         rating: 8.3,
-        poster: `${TMDB_IMG}/w500/qQclTgLMDvGBuUBFGHRipxkEwWR.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/qO55CD8tgVL1T4WKn6zYFFiD6lL.jpg`,
-        description: "As Frank Castle searches for meaning beyond revenge, an unexpected force pulls him back into the fight.",
-        service: "Disney+",
-        link: "https://www.disneyplus.com/sv-se/movies/the-punisher-one-last-kill"
-      },
-      {
-        id: "bts-the-comeback-live-arirang",
-        title: "BTS THE COMEBACK LIVE | ARIRANG",
-        year: 2026,
-        runtime: "66 min",
-        rating: 8.8,
-        poster: `${TMDB_IMG}/w500/tztql23n2UCoM76KyCSKoZxVUL1.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/rI9VPEw13XlVZzhOcLXt3Tiweyx.jpg`,
-        description: "BTS is back. The iconic group returns to the stage for a live reunion concert to perform legendary hits and unveil brand-new tracks.",
+        poster: `${TMDB_IMG}/w500/eG9lz41mJqsI4J6ubMtVqD26q2J.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/mQZJoIhTEkNhCYAqcHrQqhENLdu.jpg`,
+        description: "After a shipwreck, an intelligent robot called Roz is stranded on an uninhabited island. To survive the harsh environment, Roz bonds with the island's animals and cares for an orphaned baby goose.",
         service: "Netflix",
-        link: "https://www.netflix.com/se/title/1628123"
-      },
-      {
-        id: "all-of-us-strangers",
-        title: "All of Us Strangers",
-        year: 2023,
-        runtime: "105 min",
-        rating: 7.4,
-        poster: `${TMDB_IMG}/w500/aviJMFZSnnCAsCVyJGaPNx4Ef3i.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/8yjHiSuSEhzR916LcIecuQ8tETG.jpg`,
-        description: "One night in his near-empty tower block in contemporary London, Adam has a chance encounter with a mysterious neighbor, which punctures the rhythm of his everyday life.",
-        service: "Disney+",
-        link: "https://www.disneyplus.com/sv-se/movies/all-of-us-strangers"
+        link: "https://www.netflix.com/se/title/1184918"
       }
     ]
   },
   {
     id: "coming-of-age",
-    name: "Young Hearts",
+    name: "Rites of Passage",
     icon: "🌱",
     movies: [
       {
@@ -231,52 +195,16 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/eraserhead"
       },
       {
-        id: "toy-story-4",
-        title: "Toy Story 4",
-        year: 2019,
-        runtime: "100 min",
-        rating: 7.5,
-        poster: `${TMDB_IMG}/w500/w9kR8qbmQ01HwnvK4alvnQ2ca0L.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/q62bpQ67qaXY0u6b2wFEnQYIbPd.jpg`,
-        description: "Woody has always been confident about his place in the world, devoted to taking care of his kid—whether that's Andy or Bonnie. But after Bonnie creates a reluctant new toy called \"Forky\", a road trip ...",
-        service: "Disney+",
-        link: "https://www.disneyplus.com/sv-se/movies/toy-story-4"
-      },
-      {
-        id: "12-angry-men",
-        title: "12 Angry Men",
-        year: 1957,
-        runtime: "97 min",
-        rating: 8.6,
-        poster: `${TMDB_IMG}/w500/zhG3vKWyDRaZYoaww1UVAi29T9h.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/qqHQsStV6exghCM7zbObuYBiYxw.jpg`,
-        description: "The defense and the prosecution have rested and the jury is filing into the jury room to decide if a young Spanish-American is guilty or innocent of murdering his father. What begins as an open and sh...",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/12-angry-men"
-      },
-      {
-        id: "grave-of-the-fireflies",
-        title: "Grave of the Fireflies",
-        year: 1988,
-        runtime: "89 min",
-        rating: 8.4,
-        poster: `${TMDB_IMG}/w500/k9tv1rXZbOhH7eiCk378x61kNQ1.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/aHaqZpOL7UyVu0nKqp3SMz0o2E1.jpg`,
-        description: "In the final months of World War II, 14-year-old Seita and his sister Setsuko are orphaned when their mother is killed during an air raid in Kobe, Japan. After a falling out with their aunt, they move...",
-        service: "Netflix",
-        link: "https://www.netflix.com/se/title/12477"
-      },
-      {
-        id: "paths-of-glory",
-        title: "Paths of Glory",
-        year: 1957,
-        runtime: "88 min",
+        id: "i-am-frankelda",
+        title: "I Am Frankelda",
+        year: 2025,
+        runtime: "104 min",
         rating: 8.3,
-        poster: `${TMDB_IMG}/w500/p7OHwomA8UOhe3EhckF2IetBTh9.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/eTZkq5tI58Ec76AwPf1HOUoKtky.jpg`,
-        description: "A commanding officer defends three scapegoats on trial for a failed offensive that occurred within the French Army in 1916.",
-        service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/paths-of-glory"
+        poster: `${TMDB_IMG}/w500/hDzllxB1TQ7uUxVvjnGHirJJovt.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/pme7D46PxaOdNWika46q5VUS2CR.jpg`,
+        description: "A gifted young writer in 19th-century Mexico journeys into her subconscious and comes face to face with characters from her own spooky stories.",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/1119090"
       },
       {
         id: "the-double-life-of-v-ronique",
@@ -289,12 +217,24 @@ export const categories: Category[] = [
         description: "Véronique is a beautiful young French woman who aspires to be a renowned singer; Weronika lives in Poland, has a similar career goal and looks identical to Véronique, though the two are not related. T...",
         service: "MUBI",
         link: "https://mubi.com/sv/films/the-double-life-of-v-ronique"
+      },
+      {
+        id: "lost-in-translation",
+        title: "Lost in Translation",
+        year: 2003,
+        runtime: "102 min",
+        rating: 7.4,
+        poster: `${TMDB_IMG}/w500/3jCLmYDIIiSMPujbwygNpqdpM8N.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/6ITVHoipvxAS8luzKtHTbPaHLtT.jpg`,
+        description: "Two lost souls visiting Tokyo -- the young, neglected wife of a photographer and a washed-up movie star shooting a TV commercial -- find an odd solace and pensive freedom to be real in each other's co...",
+        service: "Netflix",
+        link: "https://www.netflix.com/se/title/153"
       }
     ]
   },
   {
     id: "classics",
-    name: "Ageless Stories",
+    name: "Timeless Classics",
     icon: "🎬",
     movies: [
       {
@@ -335,22 +275,22 @@ export const categories: Category[] = [
         link: "https://mubi.com/sv/films/perfect-blue"
       },
       {
-        id: "reservoir-dogs",
-        title: "Reservoir Dogs",
-        year: 1992,
-        runtime: "99 min",
-        rating: 8.1,
-        poster: `${TMDB_IMG}/w500/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg`,
-        backdrop: `${TMDB_IMG}/w1280/jwt159hXWA9Q5xpBo8hWb3zwLi7.jpg`,
-        description: "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic ...",
+        id: "night-of-the-living-dead",
+        title: "Night of the Living Dead",
+        year: 1968,
+        runtime: "96 min",
+        rating: 7.6,
+        poster: `${TMDB_IMG}/w500/rb2NWyb008u1EcKCOyXs2Nmj0ra.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/5KtmBSqFtHY3I9t8lgH27Mc0bqY.jpg`,
+        description: "A ragtag group barricade themselves in an old Pennsylvania farmhouse to remain safe from a horde of flesh-eating ghouls ravaging the Northeast.",
         service: "Prime Video",
-        link: "https://www.primevideo.com/-/sv/detail/reservoir-dogs"
+        link: "https://www.primevideo.com/-/sv/detail/night-of-the-living-dead"
       }
     ]
   },
   {
     id: "nordic",
-    name: "Nordic Perspectives",
+    name: "Scandinavian Visions",
     icon: "❄️",
     movies: [
       {
@@ -382,7 +322,7 @@ export const categories: Category[] = [
   },
   {
     id: "poetry",
-    name: "Visual Poetry",
+    name: "Cinematic Haiku",
     icon: "✨",
     movies: [
       {
@@ -402,7 +342,7 @@ export const categories: Category[] = [
   },
   {
     id: "quiet",
-    name: "Meditative Moments",
+    name: "Slow Burn",
     icon: "🌙",
     movies: [
       {
@@ -416,6 +356,25 @@ export const categories: Category[] = [
         description: "A woman narrates the thoughts of a world traveler, meditations on time and memory expressed in words and images from places as far-flung as Japan, Guinea-Bissau, Iceland, and San Francisco.",
         service: "MUBI",
         link: "https://mubi.com/sv/films/sans-soleil"
+      }
+    ]
+  },
+  {
+    id: "love",
+    name: "Romantic Encounters",
+    icon: "💕",
+    movies: [
+      {
+        id: "hoppers",
+        title: "Hoppers",
+        year: 2026,
+        runtime: "104 min",
+        rating: 8.2,
+        poster: `${TMDB_IMG}/w500/xjtWQ2CL1mpmMNwuU5HeS4Iuwuu.jpg`,
+        backdrop: `${TMDB_IMG}/w1280/u53UYu5XG2hNgWGvs3xGhAVzypl.jpg`,
+        description: "Scientists have discovered how to 'hop' human consciousness into lifelike robotic animals, allowing people to communicate with animals as animals. Animal lover Mabel seizes an opportunity to use the t...",
+        service: "Disney+",
+        link: "https://www.disneyplus.com/sv-se/movies/hoppers"
       }
     ]
   }
